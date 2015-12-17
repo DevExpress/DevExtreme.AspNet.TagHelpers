@@ -1,0 +1,29 @@
+version: '{build}'
+
+environment:
+  DNX_VERSION: '1.0.0-rc1-update1'
+
+cache:
+  - '%USERPROFILE%\.dnx\runtimes -> appveyor.yml'
+  - '%USERPROFILE%\.dnx\packages -> appveyor.yml, **\project.json'
+
+install:
+  - ps: iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.ps1')
+  - dnvm install %DNX_VERSION% -r clr
+
+before_build:
+  - dnu restore --quiet
+  - powershell -File replace-meta.ps1 %APPVEYOR_BUILD_NUMBER% %APPVEYOR_REPO_TAG_NAME%
+
+build_script:
+  - cmd /c "cd DevExtreme.AspNet.TagHelpers.Generator && dnx run"
+  - dnu build DevExtreme.AspNet.TagHelpers --quiet    
+
+test_script:
+  - dnx -p DevExtreme.AspNet.TagHelpers.Tests test
+
+after_test:
+  - dnu pack DevExtreme.AspNet.TagHelpers --configuration=Release --quiet
+
+artifacts:
+  - path: DevExtreme.AspNet.TagHelpers\bin\Release\*.nupkg
