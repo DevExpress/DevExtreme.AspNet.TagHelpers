@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.WidgetName = "Data Grid";
+}
+
+<dx-data-grid id="myGrid" height="500px">
+    <datasource controller="Northwind" load-action="Orders" key="OrderID"
+                update-action="UpdateOrder" insert-action="InsertOrder" delete-action="DeleteOrder" />
+
+    <column datafield="CustomerID" caption="Customer">
+        <lookup value-expr="Value" display-expr="Text">
+            <datasource controller="Northwind" load-action="CustomersLookup" key="Value" />
+        </lookup>
+    </column>
+    <column datafield="OrderDate" datatype="GridColumnDataType.Date" />
+    <column datafield="Freight" />
+    <column datafield="ShipCountry" />
+    <column datafield="ShipRegion" />
+    <column datafield="ShipVia">
+        <lookup value-expr="Value" display-expr="Text">
+            <datasource controller="Northwind" load-action="ShippersLookup" key="Value" />
+        </lookup>
+    </column>
+
+    <group-panel visible="true" />
+    <filter-row visible="true" />
+    <header-filter visible="true " />
+    <scrolling mode="GridScrollingMode.Virtual" />
+
+    <editing allow-updating="true" allow-adding="true" allow-deleting="true" />
+
+    <master-detail enabled="true" template="detailTemplate" />
+
+    <script>
+
+        // Nested tag helpers are not currently supported
+        // This shows how one can fallback to the jQuery API to implement templates
+        function detailTemplate(container, options) {
+            $("<div>")
+                .dxDataGrid({
+                    dataSource: DevExpress.data.AspNet.createStore({
+                        loadUrl: "@Url.Action("OrderDetails", "Northwind")" + "?" + $.param({ orderID: options.data.OrderID })
+                    })
+                })
+                .appendTo(container);
+        }
+
+    </script>
+
+</dx-data-grid>

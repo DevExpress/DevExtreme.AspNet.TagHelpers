@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.WidgetName = "Sparkline";
+}
+
+@foreach(var shipper in new[] { "Federal Shipping", "Speedy Express", "United Package" }) {
+    <div class="well" style="width: 400px">
+        <div class="row">
+            <div class="col-sm-12">@shipper</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+
+                <dx-sparkline argument-field="Month" value-field="Amount" type="SparklineType.Bar" show-min-max="true" show-first-last="true">
+                    <datasource url='@Url.Action("ShipsByMonth", "Northwind", new { shipper = shipper })' />
+                </dx-sparkline>
+
+            </div>
+        </div>
+    </div>
+}

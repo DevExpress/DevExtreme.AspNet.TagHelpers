@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.WidgetName = "Range Selector";
+}
+
+<dx-range-selector>
+    <datasource url='@Url.Action("ShipsByMonth", "Northwind", new { shipper = "Federal Shipping" })' />
+
+    <margin top="50" />
+    <size height="400" />
+
+    <chart>
+        <common-series-settings type="SeriesType.StepArea" argument-field="Month" />
+        <series value-field="TotalAmount" color="yellow" />
+        <series value-field="Amount" />
+    </chart>
+
+    <scale value-type="ChartDataType.DateTime" tick-interval="new { months = 1 }" minor-tick-interval="new { months = 1 }" />
+    <slider-marker format="Format.MonthAndYear" />
+</dx-range-selector>

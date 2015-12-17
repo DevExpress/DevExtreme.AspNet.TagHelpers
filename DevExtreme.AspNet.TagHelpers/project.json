@@ -1,0 +1,30 @@
+{
+    "version": "0.0",
+
+    "authors": [ "%meta_company%" ],
+    "copyright": "%meta_copyright%",
+    "description": "%meta_description%",
+    "licenseUrl": "%meta_license_url%",
+    "projectUrl": "%meta_project_url%",
+
+    "dependencies": {
+        "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-final",
+        "Microsoft.AspNet.Mvc.Formatters.Json": "6.0.0-rc1-final",
+        "Microsoft.AspNet.Razor.Runtime": "4.0.0-rc1-final",
+        "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-final",
+        "DevExtreme.AspNet.Data": "1.0.0-rc1-*"
+    },
+
+    "frameworks": {
+        "dotnet5.4": {
+            "dependencies": {
+                "System.Runtime.Serialization.Primitives": "4.0.0"
+            }
+        },
+        "net451": {
+            "frameworkAssemblies": {
+                "System.Runtime.Serialization": ""
+            }
+        }
+    }
+}

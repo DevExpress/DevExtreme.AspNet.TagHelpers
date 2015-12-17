@@ -1,0 +1,10 @@
+bin/
+obj/
+.vs/
+**/wwwroot/lib/
+*.suo
+*.user
+project.lock.json
+launchSettings.json
+DevExtreme.AspNet.TagHelpers/**/*.g.cs
+coverage/GeneratorTestsData/

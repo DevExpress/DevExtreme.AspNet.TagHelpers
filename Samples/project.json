@@ -1,0 +1,44 @@
+﻿{
+    "compilationOptions": {
+        "emitEntryPoint": true
+    },
+
+    "dependencies": {
+        "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
+        "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-final",
+        "Microsoft.AspNet.Diagnostics.Entity": "7.0.0-rc1-final",
+        "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+        "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-rc1-final",
+        "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
+        "Microsoft.AspNet.Tooling.Razor": "1.0.0-rc1-final",
+        "Microsoft.Extensions.DependencyInjection": "1.0.0-rc1-final",
+        "Microsoft.Extensions.Logging": "1.0.0-rc1-final",
+        "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
+        "EntityFramework.Core": "7.0.0-rc1-final",
+        "EntityFramework.Commands": "7.0.0-rc1-final",
+        "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
+        "EntityFramework.MicrosoftSqlServer.Design": "7.0.0-rc1-final",
+        "System.Net.Http": "4.0.0",
+        "DevExtreme.AspNet.TagHelpers": ""
+    },
+
+    "commands": {
+        "web": "Microsoft.AspNet.Server.Kestrel"
+    },
+
+    "frameworks": {
+        "dnx451": { },
+        "dnxcore50": { }
+    },
+
+    "exclude": [
+        "wwwroot",
+        "node_modules"
+    ],
+
+    "publishExclude": [
+        "**.user",
+        "**.vspscc"
+    ]
+
+}

@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.WidgetName = "Pie Chart";
+}
+
+<dx-pie-chart type="PieChartType.Donut" inner-radius="0.2">
+    <datasource controller="Northwind" load-action="SalesByCategory" />
+
+    <title text="Sales by Category" />
+    <size height="600" />
+
+    <legend orientation="LegendOrientation.Horizontal"
+            item-text-position="Position.Right"
+            horizontal-alignment="HorizontalAlignment.Center"
+            vertical-alignment="VerticalEdgeAlignment.Bottom"
+            column-count="4" />
+
+    <series argument-field="Category" value-field="Count">
+        <label visible="true" position="PieChartLabelPosition.Inside" background-color="transparent" />
+    </series>
+
+    <series argument-field="Category" value-field="Sales">
+        <label visible="true"
+               format="Format.Currency"
+               position="PieChartLabelPosition.Columns"
+               customize-text="customizeSalesLabel">
+            <connector visible="true" width="0.5" />
+            <font size="16" />
+        </label>
+    </series>
+
+    <script>
+        function customizeSalesLabel(arg) {
+            return arg.valueText + " (" + arg.percentText + ")";
+        }
+    </script>
+</dx-pie-chart>

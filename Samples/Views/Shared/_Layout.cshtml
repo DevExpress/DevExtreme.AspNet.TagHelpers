@@ -1,0 +1,77 @@
+﻿@addTagHelper "*, Microsoft.AspNet.Mvc.TagHelpers"
+@{
+    var sidebar = new[] {
+        new {
+            Name = "Grids",
+            Widgets = new[] { "DataGrid", "PivotGrid" }
+        },
+        new {
+            Name = "Viz",
+            Widgets = new[] { "Chart", "PieChart", "RangeSelector", "Sparkline" }
+        },
+        new {
+            Name = "Misc",
+            Widgets= new[] { "Scheduler" }
+        }
+    };
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Samples</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="~/lib/devextreme/css/dx.common.css" />
+    <link rel="stylesheet" href="~/lib/devextreme/css/dx.light.compact.css" />
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/globalize/lib/globalize.js"></script>
+    <script src="~/lib/devextreme/js/dx.all.js"></script>
+    <script src="~/lib/devextreme-aspnet-data/js/dx.aspnet.data.js"></script>
+</head>
+
+<body style="overflow-y: scroll">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">DevExtreme ASP.NET TagHelpers</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a target="_blank" href="http://js.devexpress.com">DevExtreme Home</a></li>
+                    <li><a target="_blank" href="https://github.com/DevExpress/DevExtreme-AspNet-TagHelpers">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-2">
+                @foreach(var group in sidebar) {
+                    <h4>@group.Name</h4>
+                    <ul class="nav">
+                        @foreach(var widget in group.Widgets) {
+                            <li><a asp-controller="Widgets" asp-action="@widget">@widget</a></li>
+                        }
+                    </ul>
+                }
+
+                <ul class="nav">
+                    <li><a target="_blank" href="http://js.devexpress.com/Demos/">More DevExtreme demos...</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-10">
+                <h1>@ViewBag.WidgetName</h1>
+                @RenderBody()
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
