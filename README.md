@@ -2,7 +2,7 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/gyf4ghfeg5qjuxnl/branch/master?svg=true)](https://ci.appveyor.com/project/dxrobot/devextreme-aspnet-taghelpers/branch/master)
 [![NuGet](https://img.shields.io/nuget/v/DevExtreme.AspNet.TagHelpers.svg)](https://www.nuget.org/packages/DevExtreme.AspNet.TagHelpers)
-[![MIT License](https://img.shields.io/github/license/DevExpress/DevExtreme.AspNet.TagHelpers.svg)](https://raw.githubusercontent.com/DevExpress/DevExtreme.AspNet.TagHelpers/master/LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/DevExpress/DevExtreme.AspNet.TagHelpers/master/LICENSE)
 
 Project status: **Release Candidate**  
 Compatible with: **ASP.NET 5 RC1**  
