@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +17,7 @@ namespace DevExtreme.AspNet.TagHelpers.Data {
         }
 
         protected override void PopulateStoreConfig(IDictionary<string, object> config) {
-            config["data"] = Items;
+            config["data"] = new JRaw(JsonConvert.SerializeObject(Items));
         }
     }
 
