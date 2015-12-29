@@ -1,5 +1,6 @@
 ﻿using DevExtreme.AspNet.TagHelpers.Data;
 using Microsoft.AspNet.Razor.TagHelpers;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +45,30 @@ namespace DevExtreme.AspNet.TagHelpers.Tests {
 
             var dataSourceConfig = page.TopLevelTag.GetConfigValue<IDictionary<string, object>>("dataSource");
             Assert.True(dataSourceConfig.ContainsKey("OnChanged"));
+        }
+
+        [Fact]
+        public void ItemsDatasourceDoesNotChangeCase() {
+            var page = new PivotDatasourcePage();
+            page.DataSources.Add(new ItemsDatasourceTagHelper {
+                Items = new[] {
+                new { CamelCaseName = "Value1", lowerCamelCaseName = "value2" }
+            }
+            });
+
+            page.ExecuteSynchronously();
+
+            var dataSourceConfig = page.TopLevelTag.GetConfigValue<IDictionary<string, object>>("dataSource");
+
+            AssertIgnoreWhitespaces.Contains(
+                @"""data"": [
+                    {
+                        ""CamelCaseName"": ""Value1"",
+                        ""lowerCamelCaseName"": ""value2""
+                    }
+                ]",
+                JsonConvert.SerializeObject(dataSourceConfig["store"])
+            );
         }
 
         class TestStoreDatasourceTagHelper : StoreDatasourceTagHelper {
