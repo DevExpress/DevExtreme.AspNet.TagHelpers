@@ -52,8 +52,11 @@ namespace DevExtreme.AspNet.TagHelpers.Tests {
             var page = new PivotDatasourcePage();
             page.DataSources.Add(new ItemsDatasourceTagHelper {
                 Items = new[] {
-                new { CamelCaseName = "Value1", lowerCamelCaseName = "value2" }
-            }
+                    new {
+                        CamelCaseName = "Value1",
+                        lowerCamelCaseName = "value2"
+                    }
+                }
             });
 
             page.ExecuteSynchronously();
