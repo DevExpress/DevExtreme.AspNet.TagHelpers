@@ -29,17 +29,17 @@ namespace DevExtreme.AspNet.TagHelpers.Data {
         }
 
         protected override void PopulateStoreConfig(IDictionary<string, object> config) {
-            TryAddAction(config, "load", LoadAction, null);
-            TryAddAction(config, "insert", InsertAction, InsertMethod);
-            TryAddAction(config, "update", UpdateAction, UpdateMethod);
-            TryAddAction(config, "delete", DeleteAction, DeleteMethod);
+            AddAction(config, "load", LoadAction, null);
+            AddAction(config, "insert", InsertAction, InsertMethod);
+            AddAction(config, "update", UpdateAction, UpdateMethod);
+            AddAction(config, "delete", DeleteAction, DeleteMethod);
 
             if(!String.IsNullOrEmpty(OnBeforeSend))
                 config["onBeforeSend"] = new JRaw(OnBeforeSend);
         }
 
 
-        void TryAddAction(IDictionary<string, object> config, string name, string action, string method) {
+        void AddAction(IDictionary<string, object> config, string name, string action, string method) {
             if(!String.IsNullOrEmpty(action))
                 config[name + "Url"] = GetActionUrl(action);
 
