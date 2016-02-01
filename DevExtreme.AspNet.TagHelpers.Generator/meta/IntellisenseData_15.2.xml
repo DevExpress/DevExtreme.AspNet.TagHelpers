@@ -137,7 +137,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxAccordion" Description="A widget that displays data source items on collapsible panels.">
+  <IntellisenseObjectInfo Name="dxAccordion" Description="A widget that displays data source items on collapsible panels." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -270,7 +270,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxActionSheet" Description="A widget consisting of a set of choices related to a certain task.">
+  <IntellisenseObjectInfo Name="dxActionSheet" Description="A widget consisting of a set of choices related to a certain task." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -376,7 +376,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxAutocomplete" Description="A textbox widget that supports autocompletion.">
+  <IntellisenseObjectInfo Name="dxAutocomplete" Description="A textbox widget that supports autocompletion." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="dataSource" Description="A data source used to fetch data to be displayed by the widget." Default="null" Type="array|datasource|datasource configuration">
@@ -502,9 +502,6 @@
       <IntellisenseObjectPropertyInfo Name="text" Description="The read-only option that holds the text displayed by the widget input element." Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="useMaskedValue" Description="Specifies whether the value option holds only characters entered by a user or prompt characters as well." Default="false" Type="boolean">
-        <Values />
-      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="valueChangeEvent" Description="Specifies DOM event names that update a widget's value." Default="&quot;input change keyup&quot;" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
@@ -588,7 +585,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxBox" Description="A container widget used to arrange inner elements.">
+  <IntellisenseObjectInfo Name="dxBox" Description="A container widget used to arrange inner elements." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -696,7 +693,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxButton" Description="A button widget.">
+  <IntellisenseObjectInfo Name="dxButton" Description="A button widget." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -767,7 +764,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxCalendar" Description="A calendar widget.">
+  <IntellisenseObjectInfo Name="dxCalendar" Description="A calendar widget." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -874,7 +871,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxCheckBox" Description="A check box widget.">
+  <IntellisenseObjectInfo Name="dxCheckBox" Description="A check box widget." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -945,7 +942,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxColorBox" Description="A widget used to specify a color value.">
+  <IntellisenseObjectInfo Name="dxColorBox" Description="A widget used to specify a color value." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -1056,9 +1053,6 @@
       <IntellisenseObjectPropertyInfo Name="text" Description="The read-only option that holds the text displayed by the widget input element." Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="useMaskedValue" Description="Specifies whether the value option holds only characters entered by a user or prompt characters as well." Default="false" Type="boolean">
-        <Values />
-      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="applyValueMode" Default="&quot;useButtons&quot;" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
@@ -1088,7 +1082,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxContextMenu" Description="A context menu widget.">
+  <IntellisenseObjectInfo Name="dxContextMenu" Description="A context menu widget." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -1222,10 +1216,10 @@
       <IntellisenseObjectPropertyInfo Name="cssClass" Description="Specifies the name of the CSS class associated with the menu." Default="&quot;&quot;" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="showSubmenuMode" Description="Specifies options of submenu showing and hiding." Default="{ name: &quot;onHover&quot;, delay: { show: 0, hide: 0 } }" Type="object">
+      <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="showSubmenuMode" Description="Specifies options of submenu showing and hiding." Default="{ name: &quot;onHover&quot;, delay: { show: 0, hide: 0 } }" Type="object|string">
         <Values />
         <Properties>
-          <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="delay" Description="Specifies the delay of submenu show and hiding." Default="{ show: 50, hide: 300 }" Type="object">
+          <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="delay" Description="Specifies the delay of submenu show and hiding." Default="{ show: 50, hide: 300 }" Type="object|numeric">
             <Values />
             <Properties>
               <IntellisenseObjectPropertyInfo Name="hide" Description="The time span after which the submenu is hidden." Default="300" Type="numeric">
@@ -1285,7 +1279,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxDataGrid" Description="A data grid widget.">
+  <IntellisenseObjectInfo Name="dxDataGrid" Description="A data grid widget." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -1499,7 +1493,8 @@
               <IntellisenseInfo Name=" &quot;notcontains&quot; " />
               <IntellisenseInfo Name=" &quot;contains&quot; " />
               <IntellisenseInfo Name=" &quot;startswith&quot; " />
-              <IntellisenseInfo Name=" &quot;endswith&quot;" />
+              <IntellisenseInfo Name=" &quot;endswith&quot; " />
+              <IntellisenseInfo Name=" &quot;between&quot;" />
             </Values>
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="filterType" Description="Specifies whether to include or exclude the records with the values selected in the column's header filter." Default="&quot;include&quot;" Type="string">
@@ -1564,7 +1559,7 @@
           <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="headerFilter" Description="Specifies column-level options for filtering using a column header filter." Default="undefined" Type="object">
             <Values />
             <Properties>
-              <IntellisenseObjectPropertyInfo Name="dataSource" Description="Specifies the data source to be used for header filter." Default="undefined" Type="array|function(options)|datasource configuration">
+              <IntellisenseObjectPropertyInfo Name="dataSource" Description="Specifies the data source to be used for the header filter." Default="undefined" Type="array|function(options)|datasource configuration">
                 <Values />
               </IntellisenseObjectPropertyInfo>
               <IntellisenseObjectPropertyInfo Name="groupInterval" Description="Specifies how header filter values should be combined into groups." Default="undefined" Type="string|number">
@@ -1615,7 +1610,8 @@
               <IntellisenseInfo Name=" &quot;notcontains&quot; " />
               <IntellisenseInfo Name=" &quot;contains&quot; " />
               <IntellisenseInfo Name=" &quot;startswith&quot; " />
-              <IntellisenseInfo Name=" &quot;endswith&quot;" />
+              <IntellisenseInfo Name=" &quot;endswith&quot; " />
+              <IntellisenseInfo Name=" &quot;between&quot;" />
             </Values>
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="setCellValue" Description="Specifies a callback function to be invoked after the cell value is edited by an end-user and before the new value is saved to the data source." Type="function(rowdata, value)">
@@ -1759,7 +1755,7 @@
               <IntellisenseObjectPropertyInfo Name="exportTo" Description="Specifies text for the Export button when this button invokes a dropdown menu so you can choose the required export format." Default="&quot;Export to&quot;" Type="string">
                 <Values />
               </IntellisenseObjectPropertyInfo>
-              <IntellisenseObjectPropertyInfo Name="exportToExcel" Description="Specifies text for the Export button when this button exports to the XSLX format." Default="&quot;Export to Excel file&quot;" Type="string">
+              <IntellisenseObjectPropertyInfo Name="exportToExcel" Description="Specifies text for the Export button's hint when this button exports to the XSLX format without invoking the drop-down menu." Default="&quot;Export to Excel file&quot;" Type="string">
                 <Values />
               </IntellisenseObjectPropertyInfo>
               <IntellisenseObjectPropertyInfo Name="selectedRows" Description="Specifies text for the option in the Export dropdown menu that allows you to choose whether to export all the grid data or the selected rows only." Default="&quot;Selected rows&quot;" Type="string">
@@ -1787,7 +1783,7 @@
           <IntellisenseObjectPropertyInfo Name="betweenStartText" Description="Specifies text for the range start in the 'between' filter type." Default="&quot;Start&quot;" Type="string">
             <Values />
           </IntellisenseObjectPropertyInfo>
-          <IntellisenseObjectPropertyInfo Name="operationDescriptions" Description="Specifies descriptions for filter operations." Default="{ &quot;=&quot;: &quot;Equals&quot;, &quot;&lt;&gt;&quot;: &quot;Does not equal&quot;, &quot;&lt;&quot;: &quot;Less than&quot;, &quot;&lt;=&quot;: &quot;Less than or equal to&quot;, &quot;&gt;&quot;: &quot;Greater than&quot;, &quot;&gt;=&quot;: &quot;Greater than or equal to&quot;, &quot;startswith&quot;: &quot;Starts with&quot;, &quot;contains&quot;: &quot;Contains&quot;, &quot;notcontains&quot;: &quot;Does not contain&quot;, &quot;endswith&quot;: &quot;Ends with&quot; }" Type="object">
+          <IntellisenseObjectPropertyInfo Name="operationDescriptions" Description="Specifies descriptions for filter operations." Default="{ &quot;=&quot;: &quot;Equals&quot;, &quot;&lt;&gt;&quot;: &quot;Does not equal&quot;, &quot;&lt;&quot;: &quot;Less than&quot;, &quot;&lt;=&quot;: &quot;Less than or equal to&quot;, &quot;&gt;&quot;: &quot;Greater than&quot;, &quot;&gt;=&quot;: &quot;Greater than or equal to&quot;, &quot;startswith&quot;: &quot;Starts with&quot;, &quot;contains&quot;: &quot;Contains&quot;, &quot;notcontains&quot;: &quot;Does not contain&quot;, &quot;endswith&quot;: &quot;Ends with&quot;, &quot;between&quot;: &quot;Between&quot; }" Type="object">
             <Values />
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="resetOperationText" Description="Specifies text for the reset operation in a filter list." Default="&quot;Reset&quot;" Type="string">
@@ -1934,6 +1930,9 @@
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="onExporting" Description="A handler for the exporting event." Default="null" Type="function(e)">
+        <Values />
+      </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="onFileSaving" Description="A handler for the fileSaving event." Default="null" Type="function(e)">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="onInitNewRow" Description="A handler for the initNewRow event." Default="null" Type="function(e)">
@@ -2383,12 +2382,15 @@
           </IntellisenseObjectPropertyInfo>
         </Properties>
       </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="twoWayBindingEnabled" Description="Specifies whether to enable two-way data binding." Default="true" Type="boolean">
+        <Values />
+      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="wordWrapEnabled" Description="Specifies whether text that does not fit into a column should be wrapped." Default="false" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxDateBox" Description="A date box widget.">
+  <IntellisenseObjectInfo Name="dxDateBox" Description="A date box widget." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -2502,9 +2504,6 @@
       <IntellisenseObjectPropertyInfo Name="text" Description="The read-only option that holds the text displayed by the widget input element." Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="useMaskedValue" Description="Specifies whether the value option holds only characters entered by a user or prompt characters as well." Default="false" Type="boolean">
-        <Values />
-      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="valueChangeEvent" Description="Specifies DOM event names that update a widget's value." Default="&quot;change&quot;" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
@@ -2583,7 +2582,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxDeferRendering" Description="A container for elements that must be rendered at a specified moment.">
+  <IntellisenseObjectInfo Name="dxDeferRendering" Description="A container for elements that must be rendered at a specified moment." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="animation" Description="Specifies the animation to be used to show the rendered content." Default="undefined" Type="animationconfig">
@@ -2606,7 +2605,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxFileUploader" Description="A widget used to select and upload a file or multiple files.">
+  <IntellisenseObjectInfo Name="dxFileUploader" Description="A widget used to select and upload a file or multiple files." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -2726,7 +2725,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxForm" Description="A form widget used to display and edit values of object fields.">
+  <IntellisenseObjectInfo Name="dxForm" Description="A form widget used to display and edit values of object fields." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -2763,6 +2762,9 @@
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="hoverStateEnabled" Description="A Boolean value specifying whether or not the widget changes its state when being hovered by an end user." Default="false" Type="boolean">
+        <Values />
+      </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="onContentReady" Default="null" Type="function">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="tabIndex" Description="Specifies the widget tab index." Default="0" Type="numeric">
@@ -2832,7 +2834,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxGallery" Description="An image gallery widget.">
+  <IntellisenseObjectInfo Name="dxGallery" Description="An image gallery widget." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -2965,7 +2967,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxList" Description="A list widget." Type="object">
+  <IntellisenseObjectInfo Name="dxList" Description="A list widget." WidgetCategory="UI_Widgets" Type="object">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -3193,7 +3195,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxLoadIndicator" Description="The widget used to indicate the loading process.">
+  <IntellisenseObjectInfo Name="dxLoadIndicator" Description="The widget used to indicate the loading process." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -3225,7 +3227,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxLoadPanel" Description="A widget used to indicate whether or not an element is loading.">
+  <IntellisenseObjectInfo Name="dxLoadPanel" Description="A widget used to indicate whether or not an element is loading." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -3306,7 +3308,7 @@
       <IntellisenseObjectPropertyInfo Name="shading" Description="A Boolean value specifying whether or not the main screen is inactive while the widget is active." Default="true" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="shadingColor" Description="Specifies the shading color." Default="''" Type="string">
+      <IntellisenseObjectPropertyInfo Name="shadingColor">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="delay" Description="The delay in milliseconds after which the load panel is displayed." Default="0" Type="number">
@@ -3326,7 +3328,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxLookup" Description="A widget that allows a user to select predefined values from a lookup window.">
+  <IntellisenseObjectInfo Name="dxLookup" Description="A widget that allows a user to select predefined values from a lookup window." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="dataSource" Description="A data source used to fetch data to be displayed by the widget." Default="null" Type="array|datasource|datasource configuration">
@@ -3416,9 +3418,6 @@
       <IntellisenseObjectPropertyInfo Name="text" Description="The read-only option that holds the text displayed by the widget input element." Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="useMaskedValue" Description="Specifies whether the value option holds only characters entered by a user or prompt characters as well." Default="false" Type="boolean">
-        <Values />
-      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="valueChangeEvent" Description="Specifies DOM event names that update a widget's value." Default="&quot;input change keyup&quot;" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
@@ -3488,7 +3487,7 @@
       <IntellisenseObjectPropertyInfo Name="clearButtonText" Description="The text displayed on the Clear button." Default="&quot;Clear&quot;" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="closeOnOutsideClick" Description="A Boolean value specifying whether or not the widget is closed if a user clicks outside of the overlaying window." Default="false" Type="boolean|function">
+      <IntellisenseObjectPropertyInfo Name="closeOnOutsideClick" Description="A Boolean value specifying whether or not a widget is closed if a user clicks outside of the overlaying window." Default="false" Type="boolean|function">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="fullScreen" Description="A Boolean value specifying whether or not to display the lookup in full-screen mode." Default="false" Type="boolean">
@@ -3591,7 +3590,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxMap" Description="An interactive map widget.">
+  <IntellisenseObjectInfo Name="dxMap" Description="An interactive map widget." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -3713,7 +3712,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxMenu" Description="A menu widget.">
+  <IntellisenseObjectInfo Name="dxMenu" Description="A menu widget." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -3844,10 +3843,10 @@
       <IntellisenseObjectPropertyInfo Name="cssClass" Description="Specifies the name of the CSS class associated with the menu." Default="&quot;&quot;" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="showSubmenuMode" Description="Specifies options of submenu showing and hiding." Default="{ name: &quot;onHover&quot;, delay: { show: 0, hide: 0 } }" Type="object">
+      <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="showSubmenuMode" Description="Specifies options of submenu showing and hiding." Default="{ name: &quot;onHover&quot;, delay: { show: 0, hide: 0 } }" Type="object|string">
         <Values />
         <Properties>
-          <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="delay" Description="Specifies the delay of submenu show and hiding." Default="{ show: 50, hide: 300 }" Type="object">
+          <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="delay" Description="Specifies the delay of submenu show and hiding." Default="{ show: 50, hide: 300 }" Type="object|numeric">
             <Values />
             <Properties>
               <IntellisenseObjectPropertyInfo Name="hide" Description="The time span after which the submenu is hidden." Default="300" Type="numeric">
@@ -3887,10 +3886,10 @@
           <IntellisenseInfo Name="&quot;vertical&quot;" />
         </Values>
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="showFirstSubmenuMode" Description="Specifies options for showing and hiding the first level submenu." Default="{ name: &quot;onClick&quot;, delay: { show: 50, hide: 300 } }" Type="object">
+      <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="showFirstSubmenuMode" Description="Specifies options for showing and hiding the first level submenu." Default="{ name: &quot;onClick&quot;, delay: { show: 50, hide: 300 } }" Type="object|string">
         <Values />
         <Properties>
-          <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="delay" Description="Specifies the delay of submenu showing and hiding." Default="{ show: 50, hide: 300 }" Type="object">
+          <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="delay" Description="Specifies the delay of submenu showing and hiding." Default="{ show: 50, hide: 300 }" Type="object|numeric">
             <Values />
             <Properties>
               <IntellisenseObjectPropertyInfo Name="hide" Description="The time span after which the submenu is hidden." Default="300" Type="numeric">
@@ -3918,7 +3917,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxMultiView" Description="A widget used to display a view and to switch between several views.">
+  <IntellisenseObjectInfo Name="dxMultiView" Description="A widget used to display a view and to switch between several views." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -4027,7 +4026,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxNavBar" Description="A widget that contains items used to navigate through application views.">
+  <IntellisenseObjectInfo Name="dxNavBar" Description="A widget that contains items used to navigate through application views." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -4145,7 +4144,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxNumberBox" Description="A textbox widget that enables a user to enter numeric values.">
+  <IntellisenseObjectInfo Name="dxNumberBox" Description="A textbox widget that enables a user to enter numeric values." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -4259,9 +4258,6 @@
       <IntellisenseObjectPropertyInfo Name="text" Description="The read-only option that holds the text displayed by the widget input element." Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="useMaskedValue" Description="Specifies whether the value option holds only characters entered by a user or prompt characters as well." Default="false" Type="boolean">
-        <Values />
-      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="valueChangeEvent" Description="Specifies DOM event names that update a widget's value." Default="&quot;change&quot;" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
@@ -4279,7 +4275,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxPanorama" Description="A widget displaying the required content in a long horizontal canvas that extends beyond the frames of the screen.">
+  <IntellisenseObjectInfo Name="dxPanorama" Description="A widget displaying the required content in a long horizontal canvas that extends beyond the frames of the screen." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -4390,7 +4386,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxPivot" Description="A widget that is similar to a traditional tab control, but optimized for the phone with simplified end-user interaction.">
+  <IntellisenseObjectInfo Name="dxPivot" Description="A widget that is similar to a traditional tab control, but optimized for the phone with simplified end-user interaction." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -4493,7 +4489,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxPivotGrid" Description="A data summarization widget for multi-dimensional data analysis and data mining.">
+  <IntellisenseObjectInfo Name="dxPivotGrid" Description="A data summarization widget for multi-dimensional data analysis and data mining." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -4649,6 +4645,9 @@
       <IntellisenseObjectPropertyInfo Name="onExporting" Description="A handler for the exporting event." Default="null" Type="function(e)">
         <Values />
       </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="onFileSaving" Description="A handler for the fileSaving event." Default="null" Type="function(e)">
+        <Values />
+      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="scrolling" Description="A configuration object specifying scrolling options." Type="object">
         <Values />
         <Properties>
@@ -4750,7 +4749,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxPivotGridFieldChooser" Description="A complementary widget for dxPivotGrid that allows you to manage data displayed in the dxPivotGrid.">
+  <IntellisenseObjectInfo Name="dxPivotGridFieldChooser" Description="A complementary widget for dxPivotGrid that allows you to manage data displayed in the dxPivotGrid." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -4830,7 +4829,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxPopover" Description="A widget that displays the required content in a popup window.">
+  <IntellisenseObjectInfo Name="dxPopover" Description="A widget that displays the required content in a popup window." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -4951,7 +4950,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxPopup" Description="A widget that displays required content in a popup window.">
+  <IntellisenseObjectInfo Name="dxPopup" Description="A widget that displays required content in a popup window." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -5082,7 +5081,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxProgressBar" Description="A widget used to indicate progress.">
+  <IntellisenseObjectInfo Name="dxProgressBar" Description="A widget used to indicate progress." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -5153,7 +5152,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxRadioGroup" Description="A widget that enables a user to select one item within a list of items represented by radio buttons.">
+  <IntellisenseObjectInfo Name="dxRadioGroup" Description="A widget that enables a user to select one item within a list of items represented by radio buttons." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -5242,7 +5241,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxRangeSlider" Description="A widget that enables a user to select a range of numeric values.">
+  <IntellisenseObjectInfo Name="dxRangeSlider" Description="A widget that enables a user to select a range of numeric values." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -5368,7 +5367,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxResizable" Description="A widget that displays required content in a resizable element.">
+  <IntellisenseObjectInfo Name="dxResizable" Description="A widget that displays required content in a resizable element." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -5421,7 +5420,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxResponsiveBox" Description="A widget used to build an adaptive markup that is dependent on screen resolution." Type="object">
+  <IntellisenseObjectInfo Name="dxResponsiveBox" Description="A widget used to build an adaptive markup that is dependent on screen resolution." WidgetCategory="UI_Widgets" Type="object">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -5512,7 +5511,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxScheduler" Description="A widget that displays scheduled data using different views and provides the capability to load, add and edit appointments.">
+  <IntellisenseObjectInfo Name="dxScheduler" Description="A widget that displays scheduled data using different views and provides the capability to load, add and edit appointments." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -5536,9 +5535,6 @@
       <IntellisenseObjectPropertyInfo Name="accessKey" Description="Specifies a shortcut key that sets focus on the widget element." Default="null" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="activeStateEnabled" Description="A Boolean value specifying whether or not the widget changes its state when interacting with a user." Default="false" Type="boolean">
-        <Values />
-      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="disabled" Description="A Boolean value specifying whether or not the widget can respond to user interaction." Default="false" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
@@ -5548,13 +5544,13 @@
       <IntellisenseObjectPropertyInfo Name="hint" Description="Specifies the text of the hint displayed for the widget." Default="undefined" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="hoverStateEnabled" Description="A Boolean value specifying whether or not the widget changes its state when being hovered by an end user." Default="false" Type="boolean">
-        <Values />
-      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="tabIndex" Description="Specifies the widget tab index." Default="0" Type="numeric">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="visible" Description="A Boolean value specifying whether or not the widget is visible." Default="true" Type="boolean">
+        <Values />
+      </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="allDayExpr" Description="Specifies the name of the data source item field whose value defines whether or not the corresponding appointment is an all-day appointment." Default="'allDay'" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="appointmentTemplate" Description="The template to be used for rendering appointments." Default="&quot;item&quot;" Type="string|function|node|jquery">
@@ -5590,6 +5586,9 @@
       <IntellisenseObjectPropertyInfo Name="dataSource" Description="A data source used to fetch data to be displayed by the widget." Default="null" Type="array|datasource|datasource configuration">
         <Values />
       </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="descriptionExpr" Description="Specifies the name of the data source item field whose value holds the description of the corresponding appointment." Default="'description'" Type="string">
+        <Values />
+      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="editing" Description="Specifies which editing operations an end-user can perform on appointments." Default="true" Type="boolean|object">
         <Values />
         <Properties>
@@ -5609,6 +5608,9 @@
             <Values />
           </IntellisenseObjectPropertyInfo>
         </Properties>
+      </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="endDateExpr" Description="Specifies the name of the data source item field that defines the ending of the appointment." Default="'endDate'" Type="string">
+        <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="endDayHour" Description="Specifies an end hour in the scheduler view's time interval." Default="24" Type="numeric">
         <Values />
@@ -5676,6 +5678,15 @@
           <IntellisenseInfo Name="'occurrence'" />
         </Values>
       </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="recurrenceExceptionExpr" Description="Specifies the name of the data source item field that defines exceptions for the current recurring appointment." Default="'recurrenceException'" Type="string">
+        <Values />
+      </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="recurrenceRuleExpr" Description="Specifies the name of the data source item field that defines a recurrence rule for generating recurring appointments." Default="'recurrenceRule'" Type="string">
+        <Values />
+      </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="remoteFiltering" Description="Specifies whether filtering is performed on the server or client side." Default="false" Type="boolean">
+        <Values />
+      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="resources" Description="Specifies an array of resources available in the scheduler." Default="[]" Type="array">
         <Values />
         <Properties>
@@ -5705,7 +5716,13 @@
       <IntellisenseObjectPropertyInfo Name="showAllDayPanel" Description="Specifies whether or not the &quot;All-day&quot; panel is visible." Default="true" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="startDateExpr" Description="Specifies the name of the data source item field that defines the start of the appointment." Default="'startDate'" Type="string">
+        <Values />
+      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="startDayHour" Description="Specifies a start hour in the scheduler view's time interval." Default="0" Type="numeric">
+        <Values />
+      </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="textExpr" Description="Specifies the name of the data source item field that holds the subject of the appointment." Default="'text'" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="useDropDownViewSwitcher" Description="Specifies whether a user can switch views using tabs or a drop-down menu." Default="false" Type="boolean">
@@ -5724,7 +5741,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxScrollView" Description="A widget used to display scrollable content.">
+  <IntellisenseObjectInfo Name="dxScrollView" Description="A widget used to display scrollable content." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -5801,7 +5818,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxSelectBox" Description="A widget that allows you to select an item in a dropdown list.">
+  <IntellisenseObjectInfo Name="dxSelectBox" Description="A widget that allows you to select an item in a dropdown list." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="dataSource" Description="A data source used to fetch data to be displayed by the widget." Default="null" Type="array|datasource|datasource configuration">
@@ -5930,9 +5947,6 @@
       <IntellisenseObjectPropertyInfo Name="text" Description="The read-only option that holds the text displayed by the widget input element." Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="useMaskedValue" Description="Specifies whether the value option holds only characters entered by a user or prompt characters as well." Default="false" Type="boolean">
-        <Values />
-      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="valueChangeEvent" Description="Specifies DOM event names that update a widget's value." Default="&quot;keyup&quot;" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
@@ -6008,7 +6022,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxSlideOut" Description="The widget that allows you to slide-out the current view to reveal an item list.">
+  <IntellisenseObjectInfo Name="dxSlideOut" Description="The widget that allows you to slide-out the current view to reveal an item list." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -6135,7 +6149,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxSlideOutView" Description="The widget that allows you to slide-out the current view to reveal a custom menu.">
+  <IntellisenseObjectInfo Name="dxSlideOutView" Description="The widget that allows you to slide-out the current view to reveal a custom menu." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -6191,7 +6205,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxSlider" Description="A widget that allows a user to select a numeric value within a given range.">
+  <IntellisenseObjectInfo Name="dxSlider" Description="A widget that allows a user to select a numeric value within a given range." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -6314,7 +6328,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxSwitch" Description="A switch widget.">
+  <IntellisenseObjectInfo Name="dxSwitch" Description="A switch widget." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -6388,7 +6402,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxTabPanel" Description="A widget used to display a view and to switch between several views by clicking the appropriate tabs.">
+  <IntellisenseObjectInfo Name="dxTabPanel" Description="A widget used to display a view and to switch between several views by clicking the appropriate tabs." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -6530,7 +6544,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxTabs" Description="A tab strip used to switch between pages.">
+  <IntellisenseObjectInfo Name="dxTabs" Description="A tab strip used to switch between pages." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -6651,7 +6665,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxTagBox" Description="A widget that allows you to select multiple items from a dropdown list.">
+  <IntellisenseObjectInfo Name="dxTagBox" Description="A widget that allows you to select multiple items from a dropdown list." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="dataSource" Description="A data source used to fetch data to be displayed by the widget." Default="null" Type="array|datasource|datasource configuration">
@@ -6768,9 +6782,6 @@
       <IntellisenseObjectPropertyInfo Name="text" Description="The read-only option that holds the text displayed by the widget input element." Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="useMaskedValue" Description="Specifies whether the value option holds only characters entered by a user or prompt characters as well." Default="false" Type="boolean">
-        <Values />
-      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="deferRendering" Description="Specifies whether widget content is rendered when the widget is shown or when rendering the widget." Default="true" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
@@ -6833,7 +6844,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxTextArea" Description="A widget used to display and edit multi-line text.">
+  <IntellisenseObjectInfo Name="dxTextArea" Description="A widget used to display and edit multi-line text." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -6944,9 +6955,6 @@
       <IntellisenseObjectPropertyInfo Name="text" Description="The read-only option that holds the text displayed by the widget input element." Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="useMaskedValue" Description="Specifies whether the value option holds only characters entered by a user or prompt characters as well." Default="false" Type="boolean">
-        <Values />
-      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="valueChangeEvent" Description="Specifies DOM event names that update a widget's value." Default="&quot;change&quot;" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
@@ -6955,7 +6963,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxTextBox" Description="A single-line text box widget.">
+  <IntellisenseObjectInfo Name="dxTextBox" Description="A single-line text box widget." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -7102,7 +7110,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxTileView" Description="A widget displaying several blocks of data as tiles.">
+  <IntellisenseObjectInfo Name="dxTileView" Description="A widget displaying several blocks of data as tiles." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -7220,7 +7228,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxToast" Description="The toast message widget.">
+  <IntellisenseObjectInfo Name="dxToast" Description="The toast message widget." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -7342,7 +7350,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxToolbar" Description="A toolbar widget.">
+  <IntellisenseObjectInfo Name="dxToolbar" Description="A toolbar widget." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -7450,7 +7458,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxTooltip" Description="A tooltip widget.">
+  <IntellisenseObjectInfo Name="dxTooltip" Description="A tooltip widget." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -7553,7 +7561,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxTreeView" Description="A widget displaying specified data items as a tree.">
+  <IntellisenseObjectInfo Name="dxTreeView" Description="A widget displaying specified data items as a tree." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -7626,15 +7634,6 @@
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="onSelectionChanged" Default="null" Type="function">
-        <Values />
-      </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="selectedIndex" Description="The index of the currently selected widget item." Default="-1" Type="numeric">
-        <Values />
-      </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="selectedItem" Description="The selected item object." Default="null" Type="object">
-        <Values />
-      </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="selectedItems" Description="An array of currently selected item objects." Type="array">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="items" Description="An array of items displayed by the widget." Type="array">
@@ -7730,16 +7729,10 @@
       <IntellisenseObjectPropertyInfo Name="searchValue" Description="Specifies the current value used to filter tree view items." Default="&quot;&quot;" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="selectAllEnabled" Description="Specifies whether the &quot;Select All&quot; check box is displayed over the tree view." Default="false" Type="boolean">
-        <Values />
-      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="selectAllText" Description="Specifies the text displayed at the &quot;Select All&quot; check box." Default="&quot;Select All&quot;" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="selectNodesRecursive" Description="Specifies whether or not to select nodes recursively." Default="true" Type="boolean">
-        <Values />
-      </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="showCheckBoxes" Description="Specifies whether or not a check box is displayed at each tree view item." Default="false" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="showCheckBoxesMode" Description="Specifies the current check boxes display mode." Default="'none'" Type="string">
@@ -7754,7 +7747,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxValidationGroup" Description="The widget that is used in the Knockout and Angular approaches to combine the editors to be validated.">
+  <IntellisenseObjectInfo Name="dxValidationGroup" Description="The widget that is used in the Knockout and Angular approaches to combine the editors to be validated." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -7774,7 +7767,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxValidationSummary" Description="A widget for displaying the result of checking validation rules for editors.">
+  <IntellisenseObjectInfo Name="dxValidationSummary" Description="A widget for displaying the result of checking validation rules for editors." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -7823,7 +7816,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxValidator" Description="A widget that is used to validate the associated DevExtreme editors against the defined validation rules.">
+  <IntellisenseObjectInfo Name="dxValidator" Description="A widget that is used to validate the associated DevExtreme editors against the defined validation rules." WidgetCategory="UI_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -7858,147 +7851,147 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxclick" Description="Raised when the element is clicked." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxclick" Description="Raised when the element is clicked." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxcontextmenu" Description="Raised when the right mouse button is clicked on the element or when the element is held during a specified time period." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxcontextmenu" Description="Raised when the right mouse button is clicked on the element or when the element is held during a specified time period." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxdblclick" Description="Raised when a user has performed a double click on the the element." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxdblclick" Description="Raised when a user has performed a double click on the the element." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxdrag" Description="Raised when the drag gesture has been performed." Type="event">
+  <IntellisenseObjectInfo Name="dxdrag" Description="Raised when the drag gesture has been performed." WidgetCategory="UI_Widgets" Type="event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxdragend" Description="Raised when the drag gesture has been completed." Type="event">
+  <IntellisenseObjectInfo Name="dxdragend" Description="Raised when the drag gesture has been completed." WidgetCategory="UI_Widgets" Type="event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxdragenter" Description="Raised when a user moves the pointer into the element, provided that the drag gesture is being performed." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxdragenter" Description="Raised when a user moves the pointer into the element, provided that the drag gesture is being performed." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxdragleave" Description="Raised when a user moves the pointer out of the element, provided that the drag gesture is being performed." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxdragleave" Description="Raised when a user moves the pointer out of the element, provided that the drag gesture is being performed." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxdragstart" Description="Raised when the drag gesture has been started." Type="event">
+  <IntellisenseObjectInfo Name="dxdragstart" Description="Raised when the drag gesture has been started." WidgetCategory="UI_Widgets" Type="event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxdrop" Description="Raised when dragged data has been dropped on the element." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxdrop" Description="Raised when dragged data has been dropped on the element." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxhold" Description="Raised when the element is being held during a specified time." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxhold" Description="Raised when the element is being held during a specified time." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxhoverend" Description="Raised when the mouse pointer leaves the element." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxhoverend" Description="Raised when the mouse pointer leaves the element." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxhoverstart" Description="Raised when the mouse pointer appears over the element." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxhoverstart" Description="Raised when the mouse pointer appears over the element." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxpinch" Description="Raised when the pinch gesture has been performed." Type="event">
+  <IntellisenseObjectInfo Name="dxpinch" Description="Raised when the pinch gesture has been performed." WidgetCategory="UI_Widgets" Type="event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxpinchend" Description="Raised when the pinch gesture has been completed." Type="event">
+  <IntellisenseObjectInfo Name="dxpinchend" Description="Raised when the pinch gesture has been completed." WidgetCategory="UI_Widgets" Type="event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxpinchstart" Description="Raised when the pinch gesture has been started." Type="event">
+  <IntellisenseObjectInfo Name="dxpinchstart" Description="Raised when the pinch gesture has been started." WidgetCategory="UI_Widgets" Type="event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxpointercancel" Description="Raised when the pointer is no longer likely to produce events." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxpointercancel" Description="Raised when the pointer is no longer likely to produce events." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxpointerdown" Description="Raised when the pointer takes on the active buttons state." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxpointerdown" Description="Raised when the pointer takes on the active buttons state." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxpointerenter" Description="Raised when a pointer is moved to either the hit test area of an element or one of its descendants." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxpointerenter" Description="Raised when a pointer is moved to either the hit test area of an element or one of its descendants." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxpointerleave" Description="Raised when a pointer is moved from either the hit test area of an element or one of its descendants." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxpointerleave" Description="Raised when a pointer is moved from either the hit test area of an element or one of its descendants." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxpointermove" Description="Raised when any pointer parameter has been changed. (Position, tilt, pressure, button state, or contact geometry)." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxpointermove" Description="Raised when any pointer parameter has been changed. (Position, tilt, pressure, button state, or contact geometry)." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxpointerout" Description="Raised when a pointer is moved from either the hit test area of an element or one of its descendants." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxpointerout" Description="Raised when a pointer is moved from either the hit test area of an element or one of its descendants." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxpointerover" Description="Raised when a pointer is moved to the hit test area of an element or one of its descendants." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxpointerover" Description="Raised when a pointer is moved to the hit test area of an element or one of its descendants." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxpointerup" Description="Raised when the pointer loses the active buttons state." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxpointerup" Description="Raised when the pointer loses the active buttons state." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxrotate" Description="Raised when the rotate gesture has been performed." Type="event">
+  <IntellisenseObjectInfo Name="dxrotate" Description="Raised when the rotate gesture has been performed." WidgetCategory="UI_Widgets" Type="event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxrotateend" Description="Raised when the rotate gesture has been completed." Type="event">
+  <IntellisenseObjectInfo Name="dxrotateend" Description="Raised when the rotate gesture has been completed." WidgetCategory="UI_Widgets" Type="event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxrotatestart" Description="Raised when the rotate gesture has been started." Type="event">
+  <IntellisenseObjectInfo Name="dxrotatestart" Description="Raised when the rotate gesture has been started." WidgetCategory="UI_Widgets" Type="event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxswipe" Description="Raised when the swipe gesture has been performed." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxswipe" Description="Raised when the swipe gesture has been performed." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxswipeend" Description="Raised when the swipe gesture is finished." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxswipeend" Description="Raised when the swipe gesture is finished." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxswipestart" Description="Raised when the swipe gesture is started." Type="jquery.event">
+  <IntellisenseObjectInfo Name="dxswipestart" Description="Raised when the swipe gesture is started." WidgetCategory="UI_Widgets" Type="jquery.event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxtransform" Description="Raised when the transform gesture has been performed." Type="event">
+  <IntellisenseObjectInfo Name="dxtransform" Description="Raised when the transform gesture has been performed." WidgetCategory="UI_Widgets" Type="event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxtransformend" Description="Raised when the transform gesture has been completed." Type="event">
+  <IntellisenseObjectInfo Name="dxtransformend" Description="Raised when the transform gesture has been completed." WidgetCategory="UI_Widgets" Type="event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxtransformstart" Description="Raised when the transform gesture has been started." Type="event">
+  <IntellisenseObjectInfo Name="dxtransformstart" Description="Raised when the transform gesture has been started." WidgetCategory="UI_Widgets" Type="event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxtranslate" Description="Raised when the translate gesture has been performed." Type="event">
+  <IntellisenseObjectInfo Name="dxtranslate" Description="Raised when the translate gesture has been performed." WidgetCategory="UI_Widgets" Type="event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxtranslateend" Description="Raised when the translate gesture has been completed." Type="event">
+  <IntellisenseObjectInfo Name="dxtranslateend" Description="Raised when the translate gesture has been completed." WidgetCategory="UI_Widgets" Type="event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxtranslatestart" Description="Raised when the translate gesture has been started." Type="event">
+  <IntellisenseObjectInfo Name="dxtranslatestart" Description="Raised when the translate gesture has been started." WidgetCategory="UI_Widgets" Type="event">
     <Values />
     <Properties />
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxBarGauge" Description="A circular bar widget.">
+  <IntellisenseObjectInfo Name="dxBarGauge" Description="A circular bar widget." WidgetCategory="Data_Visualization_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -8405,7 +8398,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxBullet" Description="A bullet graph widget.">
+  <IntellisenseObjectInfo Name="dxBullet" Description="A bullet graph widget." WidgetCategory="Data_Visualization_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -8616,7 +8609,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxChart" Description="A widget used to embed charts into HTML JS applications.">
+  <IntellisenseObjectInfo Name="dxChart" Description="A widget used to embed charts into HTML JS applications." WidgetCategory="Data_Visualization_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -12332,7 +12325,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxCircularGauge" Description="A widget that represents a gauge with a circular scale.">
+  <IntellisenseObjectInfo Name="dxCircularGauge" Description="A widget that represents a gauge with a circular scale." WidgetCategory="Data_Visualization_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -12890,7 +12883,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxExporter" Description="A widget that allows you to export any DevExtreme data visualization widget into an image or a document." Type="object">
+  <IntellisenseObjectInfo Name="dxExporter" Description="A widget that allows you to export any DevExtreme data visualization widget into an image or a document." WidgetCategory="Data_Visualization_Widgets" Type="object">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Description="A handler for the disposing event." Default="null" Type="function">
@@ -12928,7 +12921,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxLinearGauge" Description="A widget that represents a gauge with a linear scale.">
+  <IntellisenseObjectInfo Name="dxLinearGauge" Description="A widget that represents a gauge with a linear scale." WidgetCategory="Data_Visualization_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -13508,7 +13501,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxPieChart" Description="A circular chart widget for HTML JS applications.">
+  <IntellisenseObjectInfo Name="dxPieChart" Description="A circular chart widget for HTML JS applications." WidgetCategory="Data_Visualization_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -14722,7 +14715,7 @@
           </IntellisenseObjectPropertyInfo>
         </Properties>
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="startAngle" Description="Specifies the starting angle in arc degrees for the first segment in a pie chart." Default="0" Type="numeric">
+      <IntellisenseObjectPropertyInfo Name="startAngle" Description="Specifies the angle in arc degrees from which the first segment of a pie chart should start." Default="0" Type="numeric">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="type" Description="Specifies the type of the pie chart series." Default="'pie'" Type="string">
@@ -14734,7 +14727,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxPolarChart" Description="A chart widget displaying data in a polar coordinate system.">
+  <IntellisenseObjectInfo Name="dxPolarChart" Description="A chart widget displaying data in a polar coordinate system." WidgetCategory="Data_Visualization_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -15668,10 +15661,13 @@
               </IntellisenseObjectPropertyInfo>
             </Properties>
           </IntellisenseObjectPropertyInfo>
+          <IntellisenseObjectPropertyInfo Name="originValue" Description="Specifies the value to be used as the origin for the argument axis." Default="undefined" Type="numeric">
+            <Values />
+          </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="period" Description="Specifies the period of the argument values in the data source." Default="undefined" Type="numeric">
             <Values />
           </IntellisenseObjectPropertyInfo>
-          <IntellisenseObjectPropertyInfo Name="startAngle" Description="Specifies a start angle for the argument axis in degrees." Default="0" Type="numeric">
+          <IntellisenseObjectPropertyInfo Name="startAngle" Description="Specifies the angle in arc degrees to which the argument axis should be rotated. The positive values rotate the axis clockwise." Default="0" Type="numeric">
             <Values />
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="strips" Description="Specifies options for argument axis strips." Type="array">
@@ -17496,7 +17492,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxRangeSelector" Description="A widget that allows end users to select a range of values on a scale.">
+  <IntellisenseObjectInfo Name="dxRangeSelector" Description="A widget that allows end users to select a range of values on a scale." WidgetCategory="Data_Visualization_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -17921,19 +17917,19 @@
               </IntellisenseObjectPropertyInfo>
             </Properties>
           </IntellisenseObjectPropertyInfo>
-          <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="minorTick" Description="" Type="object">
+          <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="minorTick" Description="Specifies options of the range selector's minor ticks." Type="object">
             <Values />
             <Properties>
-              <IntellisenseObjectPropertyInfo Name="color" Description="" Default="'#000000'" Type="string">
+              <IntellisenseObjectPropertyInfo Name="color" Description="Specifies the color of the scale's minor ticks." Default="'#000000'" Type="string">
                 <Values />
               </IntellisenseObjectPropertyInfo>
-              <IntellisenseObjectPropertyInfo Name="opacity" Description="" Default="0.06" Type="numeric">
+              <IntellisenseObjectPropertyInfo Name="opacity" Description="Specifies the opacity of the scale's minor ticks." Default="0.06" Type="numeric">
                 <Values />
               </IntellisenseObjectPropertyInfo>
-              <IntellisenseObjectPropertyInfo Name="visible" Description="" Default="true" Type="boolean">
+              <IntellisenseObjectPropertyInfo Name="visible" Description="Indicates whether scale minor ticks are visible or not." Default="true" Type="boolean">
                 <Values />
               </IntellisenseObjectPropertyInfo>
-              <IntellisenseObjectPropertyInfo Name="width" Description="" Default="1" Type="numeric">
+              <IntellisenseObjectPropertyInfo Name="width" Description="Specifies the width of the scale's minor ticks." Default="1" Type="numeric">
                 <Values />
               </IntellisenseObjectPropertyInfo>
             </Properties>
@@ -18039,7 +18035,7 @@
               </IntellisenseObjectPropertyInfo>
             </Properties>
           </IntellisenseObjectPropertyInfo>
-          <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="tickInterval" Description="" Default="undefined" Type="numeric|object|string">
+          <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="tickInterval" Description="Specifies an interval between axis ticks." Default="undefined" Type="numeric|object|string">
             <Values>
               <IntellisenseInfo Name="'millisecond' " />
               <IntellisenseInfo Name=" 'second' " />
@@ -18052,25 +18048,25 @@
               <IntellisenseInfo Name=" 'year'" />
             </Values>
             <Properties>
-              <IntellisenseObjectPropertyInfo Name="days" Description="" Type="numeric">
+              <IntellisenseObjectPropertyInfo Name="days" Description="Specifies the count in days between ticks on a date-time axis." Type="numeric">
                 <Values />
               </IntellisenseObjectPropertyInfo>
-              <IntellisenseObjectPropertyInfo Name="hours" Description="" Type="numeric">
+              <IntellisenseObjectPropertyInfo Name="hours" Description="Specifies the count in hours between the ticks on a date-time axis." Type="numeric">
                 <Values />
               </IntellisenseObjectPropertyInfo>
-              <IntellisenseObjectPropertyInfo Name="milliseconds" Description="" Type="numeric">
+              <IntellisenseObjectPropertyInfo Name="milliseconds" Description="Specifies the count in milliseconds between the ticks on a date-time axis." Type="numeric">
                 <Values />
               </IntellisenseObjectPropertyInfo>
-              <IntellisenseObjectPropertyInfo Name="minutes" Description="" Type="numeric">
+              <IntellisenseObjectPropertyInfo Name="minutes" Description="Specifies the count in minutes between ticks on a date-time axis." Type="numeric">
                 <Values />
               </IntellisenseObjectPropertyInfo>
-              <IntellisenseObjectPropertyInfo Name="months" Description="" Type="numeric">
+              <IntellisenseObjectPropertyInfo Name="months" Description="Specifies the count in months between ticks on a date-time axis." Type="numeric">
                 <Values />
               </IntellisenseObjectPropertyInfo>
-              <IntellisenseObjectPropertyInfo Name="seconds" Description="" Type="numeric">
+              <IntellisenseObjectPropertyInfo Name="seconds" Description="Specifies the count in seconds between the ticks on a date-time axis." Type="numeric">
                 <Values />
               </IntellisenseObjectPropertyInfo>
-              <IntellisenseObjectPropertyInfo Name="years" Description="" Type="numeric">
+              <IntellisenseObjectPropertyInfo Name="years" Description="Specifies the count in years between the ticks/grid lines on a date-time axis." Type="numeric">
                 <Values />
               </IntellisenseObjectPropertyInfo>
             </Properties>
@@ -18310,7 +18306,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxSparkline" Description="A sparkline widget.">
+  <IntellisenseObjectInfo Name="dxSparkline" Description="A sparkline widget." WidgetCategory="Data_Visualization_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -18575,7 +18571,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxVectorMap" Description="A vector map widget.">
+  <IntellisenseObjectInfo Name="dxVectorMap" Description="A vector map widget." WidgetCategory="Data_Visualization_Widgets">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Default="null" Type="function">
@@ -18666,7 +18662,7 @@
           <IntellisenseObjectPropertyInfo Name="borderColor" Description="Specifies a color for the border of the layer elements." Default="'#9d9d9d'" Type="string">
             <Values />
           </IntellisenseObjectPropertyInfo>
-          <IntellisenseObjectPropertyInfo Name="borderWidth" Description="Specifies the width of the layer elements border in pixels." Default="1" Type="numeric">
+          <IntellisenseObjectPropertyInfo Name="borderWidth" Description="Specifies the line width (for layers of a line type) or width of the layer elements border in pixels." Default="1" Type="numeric">
             <Values />
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="color" Description="Specifies a color for layer elements." Default="'#d2d2d2'" Type="string">
@@ -18698,7 +18694,7 @@
           <IntellisenseObjectPropertyInfo Name="hoveredBorderColor" Description="Specifies a color for the border of the layer element when it is hovered over." Default="'#303030'" Type="string">
             <Values />
           </IntellisenseObjectPropertyInfo>
-          <IntellisenseObjectPropertyInfo Name="hoveredBorderWidth" Description="Specifies the pixel-measured width for the border of the layer element when it is hovered over." Default="1" Type="numeric">
+          <IntellisenseObjectPropertyInfo Name="hoveredBorderWidth" Description="Specifies the pixel-measured line width (for layers of a line type) or width for the border of the layer element when it is hovered over." Default="1" Type="numeric">
             <Values />
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="hoveredColor" Description="Specifies a color for a layer element when it is hovered over." Default="'#d2d2d2'" Type="string">
@@ -18769,7 +18765,7 @@
           <IntellisenseObjectPropertyInfo Name="selectedBorderColor" Description="Specifies a color for the border of the layer element when it is selected." Default="'#303030'" Type="string">
             <Values />
           </IntellisenseObjectPropertyInfo>
-          <IntellisenseObjectPropertyInfo Name="selectedBorderWidth" Description="Specifies a pixel-measured width for the border of the layer element when it is selected." Default="2" Type="numeric">
+          <IntellisenseObjectPropertyInfo Name="selectedBorderWidth" Description="Specifies a pixel-measured line width (for layers of a line type) or width for the border of the layer element when it is selected." Default="2" Type="numeric">
             <Values />
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="selectedColor" Description="Specifies a color for the layer element when it is selected." Default="'#d2d2d2'" Type="string">

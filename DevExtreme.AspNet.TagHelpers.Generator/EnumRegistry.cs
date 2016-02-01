@@ -188,7 +188,7 @@ namespace DevExtreme.AspNet.TagHelpers.Generator {
             {
                 "FilterOperations",
                 new EnumInfo(
-                    new[] { "=", "<>", "<", "<=", ">", ">=", "notcontains", "contains", "startswith", "endswith" },
+                    new[] { "=", "<>", "<", "<=", ">", ">=", "notcontains", "contains", "startswith", "endswith", "between" },
                     new[] {
                         "DevExtreme.AspNet.TagHelpers.dxDataGrid.Column.FilterOperations",
                         "DevExtreme.AspNet.TagHelpers.dxDataGrid.Column.SelectedFilterOperation"
