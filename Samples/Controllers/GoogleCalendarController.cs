@@ -22,7 +22,8 @@ namespace Samples.Controllers {
                                    select new {
                                        text = (string)i["summary"],
                                        startDate = (DateTime?)i["start"]["dateTime"],
-                                       endDate = (DateTime?)i["end"]["dateTime"]
+                                       endDate = (DateTime?)i["end"]["dateTime"],
+                                       recurrenceRule = "" // TODO consider replacing with '-expr' attribute in 15.2.6
                                    };
 
                 return DataSourceLoadResult.Create(appointments, loadOptions);
