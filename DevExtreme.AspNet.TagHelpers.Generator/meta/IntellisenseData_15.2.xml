@@ -508,16 +508,6 @@
       <IntellisenseObjectPropertyInfo Name="maxLength" Description="Specifies the maximum number of characters you can enter into the textbox." Default="null" Type="string|numeric">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="mode" Description="The &quot;mode&quot; attribute value of the actual HTML input element representing the text box." Default="&quot;text&quot;" Type="string">
-        <Values>
-          <IntellisenseInfo Name="'text'" />
-          <IntellisenseInfo Name="'email'" />
-          <IntellisenseInfo Name="'search'" />
-          <IntellisenseInfo Name="'tel'" />
-          <IntellisenseInfo Name="'url'" />
-          <IntellisenseInfo Name="'password'" />
-        </Values>
-      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="deferRendering" Description="Specifies whether widget content is rendered when the widget is shown or when rendering the widget." Default="true" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
@@ -2531,6 +2521,12 @@
       <IntellisenseObjectPropertyInfo Name="opened" Description="Specifies whether or not the drop-down editor is displayed." Default="false" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="applyButtonText" Description="The text displayed on the Apply button." Default="&quot;Done&quot;" Type="string">
+        <Values />
+      </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="cancelButtonText" Description="The text displayed on the Cancel button." Default="&quot;Cancel&quot;" Type="string">
+        <Values />
+      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="dateOutOfRangeMessage" Description="Specifies the message displayed if the specified date is later than the max value or earlier than the min value." Default="&quot;Value is out of range&quot;" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
@@ -2817,6 +2813,9 @@
       <IntellisenseObjectPropertyInfo Name="requiredMark" Description="The text displayed for required fields." Default="&quot;*&quot;" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="requiredMessage" Description="Specifies the message that is shown for end-users a required field value is not specified." Default="&quot;{0} is required&quot;" Type="string">
+        <Values />
+      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="scrollingEnabled" Description="A Boolean value specifying whether to enable or disable form scrolling." Default="false" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
@@ -2826,7 +2825,7 @@
       <IntellisenseObjectPropertyInfo Name="showOptionalMark" Description="Specifies whether or not the optional mark is displayed for optional fields." Default="false" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="showRequiredMark" Description="Specifies whether or not the required mark is displayed for optional fields." Default="true" Type="boolean">
+      <IntellisenseObjectPropertyInfo Name="showRequiredMark" Description="Specifies whether or not the required mark is displayed for required fields." Default="true" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="showValidationSummary" Description="Specifies whether or not the total validation summary is displayed on the form." Default="false" Type="boolean">
@@ -3254,7 +3253,7 @@
       <IntellisenseObjectPropertyInfo Name="hoverStateEnabled" Description="A Boolean value specifying whether or not the widget changes its state when being hovered by an end user." Default="false" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="onContentReady">
+      <IntellisenseObjectPropertyInfo Name="onContentReady" Default="null" Type="function">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="visible" Description="A Boolean value specifying whether or not the widget is visible." Default="false" Type="boolean">
@@ -3434,6 +3433,9 @@
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="displayValue" Description="Returns the value currently displayed by the widget." Default="undefined" Type="string">
+        <Values />
+      </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="fieldTemplate" Description="The template to be used for rendering the widget text field." Default="null" Type="string|function|node|jquery">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="minSearchLength" Description="The minimum number of characters that must be entered into the text box to begin a search." Default="0" Type="numeric">
@@ -3635,7 +3637,7 @@
       <IntellisenseObjectPropertyInfo Name="visible" Description="A Boolean value specifying whether or not the widget is visible." Default="true" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="autoAdjust" Description="Specifies whether or not the widget automatically adjusts center and zoom option values when adding a new marker or route." Default="true" Type="boolean">
+      <IntellisenseObjectPropertyInfo Name="autoAdjust" Description="Specifies whether or not the widget automatically adjusts center and zoom option values when adding a new marker or route or when creating a widget if it initially contains markers or routes." Default="true" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="center" Description="An object, a string, or an array specifying the location displayed at the center of the widget." Type="object|string|array">
@@ -3889,7 +3891,7 @@
       <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="showFirstSubmenuMode" Description="Specifies options for showing and hiding the first level submenu." Default="{ name: &quot;onClick&quot;, delay: { show: 50, hide: 300 } }" Type="object|string">
         <Values />
         <Properties>
-          <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="delay" Description="Specifies the delay of submenu showing and hiding." Default="{ show: 50, hide: 300 }" Type="object|numeric">
+          <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="delay" Description="Specifies the delay in submenu showing and hiding." Default="{ show: 50, hide: 300 }" Type="object|numeric">
             <Values />
             <Properties>
               <IntellisenseObjectPropertyInfo Name="hide" Description="The time span after which the submenu is hidden." Default="300" Type="numeric">
@@ -4018,7 +4020,7 @@
       <IntellisenseObjectPropertyInfo Name="deferRendering" Description="Specifies whether widget content is rendered when the widget is shown or when rendering the widget." Default="true" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="loop" Description="A Boolean value specifying whether or not to scroll back to the first item after the last item is swiped." Default="true" Type="boolean">
+      <IntellisenseObjectPropertyInfo Name="loop" Description="A Boolean value specifying whether or not to scroll back to the first item after the last item is swiped." Default="false" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="swipeEnabled" Description="A Boolean value specifying whether or not to allow users to change the selected index by swiping." Default="true" Type="boolean">
@@ -4266,6 +4268,12 @@
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="min" Description="The minimum value accepted by the number box." Default="undefined" Type="numeric">
         <Values />
+      </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="mode" Description="The &quot;mode&quot; attribute value of the actual HTML input element representing the widget." Default="&quot;text&quot;" Type="string">
+        <Values>
+          <IntellisenseInfo Name="'text'" />
+          <IntellisenseInfo Name="'number'" />
+        </Values>
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="showSpinButtons" Description="Specifies whether or not to show spin buttons." Default="false" Type="boolean">
         <Values />
@@ -4859,7 +4867,7 @@
       <IntellisenseObjectPropertyInfo Name="hoverStateEnabled" Description="A Boolean value specifying whether or not the widget changes its state when being hovered by an end user." Default="false" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="onContentReady">
+      <IntellisenseObjectPropertyInfo Name="onContentReady" Default="null" Type="function">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="visible" Description="A Boolean value specifying whether or not the widget is visible." Default="false" Type="boolean">
@@ -4986,7 +4994,7 @@
       <IntellisenseObjectPropertyInfo Name="hoverStateEnabled" Description="A Boolean value specifying whether or not the widget changes its state when being hovered by an end user." Default="false" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="onContentReady">
+      <IntellisenseObjectPropertyInfo Name="onContentReady" Default="null" Type="function">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="tabIndex" Description="Specifies the widget tab index." Default="0" Type="numeric">
@@ -5560,14 +5568,7 @@
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="cellDuration" Description="Specifies cell duration in minutes." Default="30" Type="numeric">
-        <Values>
-          <IntellisenseInfo Name="5" />
-          <IntellisenseInfo Name="10" />
-          <IntellisenseInfo Name="15" />
-          <IntellisenseInfo Name="20" />
-          <IntellisenseInfo Name="30" />
-          <IntellisenseInfo Name="60" />
-        </Values>
+        <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="currentDate" Description="Specifies a date displayed on the current scheduler view by default." Default="new Date()" Type="object">
         <Values />
@@ -5609,7 +5610,7 @@
           </IntellisenseObjectPropertyInfo>
         </Properties>
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="endDateExpr" Description="Specifies the name of the data source item field that defines the ending of the appointment." Default="'endDate'" Type="string">
+      <IntellisenseObjectPropertyInfo Name="endDateExpr" Description="Specifies the name of the data source item field that defines the ending of an appointment." Default="'endDate'" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="endDayHour" Description="Specifies an end hour in the scheduler view's time interval." Default="24" Type="numeric">
@@ -5716,13 +5717,13 @@
       <IntellisenseObjectPropertyInfo Name="showAllDayPanel" Description="Specifies whether or not the &quot;All-day&quot; panel is visible." Default="true" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="startDateExpr" Description="Specifies the name of the data source item field that defines the start of the appointment." Default="'startDate'" Type="string">
+      <IntellisenseObjectPropertyInfo Name="startDateExpr" Description="Specifies the name of the data source item field that defines the start of an appointment." Default="'startDate'" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="startDayHour" Description="Specifies a start hour in the scheduler view's time interval." Default="0" Type="numeric">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="textExpr" Description="Specifies the name of the data source item field that holds the subject of the appointment." Default="'text'" Type="string">
+      <IntellisenseObjectPropertyInfo Name="textExpr" Description="Specifies the name of the data source item field that holds the subject of an appointment." Default="'text'" Type="string">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="useDropDownViewSwitcher" Description="Specifies whether a user can switch views using tabs or a drop-down menu." Default="false" Type="boolean">
@@ -5952,16 +5953,6 @@
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="maxLength" Description="Specifies the maximum number of characters you can enter into the textbox." Default="null" Type="string|numeric">
         <Values />
-      </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="mode" Description="The &quot;mode&quot; attribute value of the actual HTML input element representing the text box." Default="&quot;text&quot;" Type="string">
-        <Values>
-          <IntellisenseInfo Name="'text'" />
-          <IntellisenseInfo Name="'email'" />
-          <IntellisenseInfo Name="'search'" />
-          <IntellisenseInfo Name="'tel'" />
-          <IntellisenseInfo Name="'url'" />
-          <IntellisenseInfo Name="'password'" />
-        </Values>
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="deferRendering" Description="Specifies whether widget content is rendered when the widget is shown or when rendering the widget." Default="true" Type="boolean">
         <Values />
@@ -6515,7 +6506,7 @@
       <IntellisenseObjectPropertyInfo Name="deferRendering" Description="Specifies whether widget content is rendered when the widget is shown or when rendering the widget." Default="true" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="loop" Description="A Boolean value specifying whether or not to scroll back to the first item after the last item is swiped." Default="true" Type="boolean">
+      <IntellisenseObjectPropertyInfo Name="loop" Description="A Boolean value specifying whether or not to scroll back to the first item after the last item is swiped." Default="false" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="swipeEnabled" Type="boolean">
@@ -7261,7 +7252,7 @@
       <IntellisenseObjectPropertyInfo Name="hoverStateEnabled" Description="A Boolean value specifying whether or not the widget changes its state when being hovered by an end user." Default="false" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="onContentReady">
+      <IntellisenseObjectPropertyInfo Name="onContentReady" Default="null" Type="function">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="tabIndex" Description="Specifies the widget tab index." Default="0" Type="numeric">
@@ -7488,7 +7479,7 @@
       <IntellisenseObjectPropertyInfo Name="hoverStateEnabled" Description="A Boolean value specifying whether or not the widget changes its state when being hovered by an end user." Default="false" Type="boolean">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="onContentReady">
+      <IntellisenseObjectPropertyInfo Name="onContentReady" Default="null" Type="function">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="visible" Description="A Boolean value specifying whether or not the widget is visible." Default="false" Type="boolean">
@@ -10838,6 +10829,9 @@
                   <IntellisenseObjectPropertyInfo Name="backgroundColor" Description="Specifies a color for the background of the label that belongs to the horizontal crosshair line." Default="&quot;#f78119&quot;" Type="string">
                     <Values />
                   </IntellisenseObjectPropertyInfo>
+                  <IntellisenseObjectPropertyInfo Name="customizeText" Description="Customizes the text displayed by the crosshair label that accompany the horizontal line." Type="function(info)">
+                    <Values />
+                  </IntellisenseObjectPropertyInfo>
                   <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="font" Description="Specifies font options for the text of the label that belongs to the horizontal crosshair line." Type="object">
                     <Values />
                     <Properties>
@@ -10857,6 +10851,35 @@
                         <Values />
                       </IntellisenseObjectPropertyInfo>
                     </Properties>
+                  </IntellisenseObjectPropertyInfo>
+                  <IntellisenseObjectPropertyInfo Name="format" Description="Specifies the format of the values displayed by crosshair labels." Default="''" Type="string">
+                    <Values>
+                      <IntellisenseInfo Name="'currency' " />
+                      <IntellisenseInfo Name=" 'fixedPoint' " />
+                      <IntellisenseInfo Name=" 'percent' " />
+                      <IntellisenseInfo Name=" 'decimal' " />
+                      <IntellisenseInfo Name=" 'exponential' " />
+                      <IntellisenseInfo Name=" 'largeNumber' " />
+                      <IntellisenseInfo Name=" 'thousands' " />
+                      <IntellisenseInfo Name=" 'millions' " />
+                      <IntellisenseInfo Name=" 'billions' " />
+                      <IntellisenseInfo Name=" 'trillions' " />
+                      <IntellisenseInfo Name=" 'longDate' " />
+                      <IntellisenseInfo Name=" 'longTime' " />
+                      <IntellisenseInfo Name=" 'monthAndDay' " />
+                      <IntellisenseInfo Name=" 'monthAndYear' " />
+                      <IntellisenseInfo Name=" 'quarterAndYear' " />
+                      <IntellisenseInfo Name=" 'shortDate' " />
+                      <IntellisenseInfo Name=" 'shortTime' " />
+                      <IntellisenseInfo Name=" 'millisecond' " />
+                      <IntellisenseInfo Name=" 'day' " />
+                      <IntellisenseInfo Name=" 'month' " />
+                      <IntellisenseInfo Name=" 'quarter' " />
+                      <IntellisenseInfo Name=" 'year'" />
+                    </Values>
+                  </IntellisenseObjectPropertyInfo>
+                  <IntellisenseObjectPropertyInfo Name="precision" Description="Specifies a precision for formatted values." Default="0" Type="numeric">
+                    <Values />
                   </IntellisenseObjectPropertyInfo>
                   <IntellisenseObjectPropertyInfo Name="visible" Description="Specifies whether the label of the horizontal crosshair line is visible or not." Default="false" Type="boolean">
                     <Values />
@@ -10880,6 +10903,9 @@
               <IntellisenseObjectPropertyInfo Name="backgroundColor" Description="Specifies a color for the background of the crosshair labels." Default="&quot;#f78119&quot;" Type="string">
                 <Values />
               </IntellisenseObjectPropertyInfo>
+              <IntellisenseObjectPropertyInfo Name="customizeText" Description="Customizes the text displayed by the crosshair labels." Type="function(info)">
+                <Values />
+              </IntellisenseObjectPropertyInfo>
               <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="font" Description="Specifies font options for the text of the crosshair labels." Type="object">
                 <Values />
                 <Properties>
@@ -10899,6 +10925,35 @@
                     <Values />
                   </IntellisenseObjectPropertyInfo>
                 </Properties>
+              </IntellisenseObjectPropertyInfo>
+              <IntellisenseObjectPropertyInfo Name="format" Description="Specifies the format of the values displayed by crosshair labels." Default="''" Type="string">
+                <Values>
+                  <IntellisenseInfo Name="'currency' " />
+                  <IntellisenseInfo Name=" 'fixedPoint' " />
+                  <IntellisenseInfo Name=" 'percent' " />
+                  <IntellisenseInfo Name=" 'decimal' " />
+                  <IntellisenseInfo Name=" 'exponential' " />
+                  <IntellisenseInfo Name=" 'largeNumber' " />
+                  <IntellisenseInfo Name=" 'thousands' " />
+                  <IntellisenseInfo Name=" 'millions' " />
+                  <IntellisenseInfo Name=" 'billions' " />
+                  <IntellisenseInfo Name=" 'trillions' " />
+                  <IntellisenseInfo Name=" 'longDate' " />
+                  <IntellisenseInfo Name=" 'longTime' " />
+                  <IntellisenseInfo Name=" 'monthAndDay' " />
+                  <IntellisenseInfo Name=" 'monthAndYear' " />
+                  <IntellisenseInfo Name=" 'quarterAndYear' " />
+                  <IntellisenseInfo Name=" 'shortDate' " />
+                  <IntellisenseInfo Name=" 'shortTime' " />
+                  <IntellisenseInfo Name=" 'millisecond' " />
+                  <IntellisenseInfo Name=" 'day' " />
+                  <IntellisenseInfo Name=" 'month' " />
+                  <IntellisenseInfo Name=" 'quarter' " />
+                  <IntellisenseInfo Name=" 'year'" />
+                </Values>
+              </IntellisenseObjectPropertyInfo>
+              <IntellisenseObjectPropertyInfo Name="precision" Description="Specifies a precision for formatted values." Default="0" Type="numeric">
+                <Values />
               </IntellisenseObjectPropertyInfo>
               <IntellisenseObjectPropertyInfo Name="visible" Description="Specifies whether the crosshair labels are visible or not." Default="false" Type="boolean">
                 <Values />
@@ -10928,6 +10983,9 @@
                   <IntellisenseObjectPropertyInfo Name="backgroundColor" Description="Specifies a color for the background of the label that belongs to the vertical crosshair line." Default="&quot;#f78119&quot;" Type="string">
                     <Values />
                   </IntellisenseObjectPropertyInfo>
+                  <IntellisenseObjectPropertyInfo Name="customizeText" Description="Customizes the text displayed by the crosshair label that accompany the vertical line." Type="function(info)">
+                    <Values />
+                  </IntellisenseObjectPropertyInfo>
                   <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="font" Description="Specifies font options for the text of the label that belongs to the vertical crosshair line." Type="object">
                     <Values />
                     <Properties>
@@ -10947,6 +11005,35 @@
                         <Values />
                       </IntellisenseObjectPropertyInfo>
                     </Properties>
+                  </IntellisenseObjectPropertyInfo>
+                  <IntellisenseObjectPropertyInfo Name="format" Description="Specifies the format of the values displayed by crosshair labels." Default="''" Type="string">
+                    <Values>
+                      <IntellisenseInfo Name="'currency' " />
+                      <IntellisenseInfo Name=" 'fixedPoint' " />
+                      <IntellisenseInfo Name=" 'percent' " />
+                      <IntellisenseInfo Name=" 'decimal' " />
+                      <IntellisenseInfo Name=" 'exponential' " />
+                      <IntellisenseInfo Name=" 'largeNumber' " />
+                      <IntellisenseInfo Name=" 'thousands' " />
+                      <IntellisenseInfo Name=" 'millions' " />
+                      <IntellisenseInfo Name=" 'billions' " />
+                      <IntellisenseInfo Name=" 'trillions' " />
+                      <IntellisenseInfo Name=" 'longDate' " />
+                      <IntellisenseInfo Name=" 'longTime' " />
+                      <IntellisenseInfo Name=" 'monthAndDay' " />
+                      <IntellisenseInfo Name=" 'monthAndYear' " />
+                      <IntellisenseInfo Name=" 'quarterAndYear' " />
+                      <IntellisenseInfo Name=" 'shortDate' " />
+                      <IntellisenseInfo Name=" 'shortTime' " />
+                      <IntellisenseInfo Name=" 'millisecond' " />
+                      <IntellisenseInfo Name=" 'day' " />
+                      <IntellisenseInfo Name=" 'month' " />
+                      <IntellisenseInfo Name=" 'quarter' " />
+                      <IntellisenseInfo Name=" 'year'" />
+                    </Values>
+                  </IntellisenseObjectPropertyInfo>
+                  <IntellisenseObjectPropertyInfo Name="precision" Description="Specifies a precision for formatted values." Default="0" Type="numeric">
+                    <Values />
                   </IntellisenseObjectPropertyInfo>
                   <IntellisenseObjectPropertyInfo Name="visible" Description="Specifies whether the label of the vertical crosshair line is visible or not." Default="false" Type="boolean">
                     <Values />
