@@ -43,12 +43,12 @@ namespace Samples.Controllers {
                    };
         }
 
-        public IActionResult Orders(DataSourceLoadOptions options) {
-            return DataSourceLoadResult.Create(_nwind.Orders, options);
+        public object Orders(DataSourceLoadOptions options) {
+            return DataSourceLoader.Load(_nwind.Orders, options);
         }
 
-        public IActionResult OrderDetails(int orderID, DataSourceLoadOptions options) {
-            return DataSourceLoadResult.Create(
+        public object OrderDetails(int orderID, DataSourceLoadOptions options) {
+            return DataSourceLoader.Load(
                 from i in _nwind.Order_Details
                 where i.OrderID == orderID
                 select new {
@@ -61,8 +61,8 @@ namespace Samples.Controllers {
             );
         }
 
-        public IActionResult CustomersLookup(DataSourceLoadOptions options) {
-            return DataSourceLoadResult.Create(
+        public object CustomersLookup(DataSourceLoadOptions options) {
+            return DataSourceLoader.Load(
                 from c in _nwind.Customers
                 orderby c.CompanyName
                 select new { Value = c.CustomerID, Text = $"{c.CompanyName} ({c.Country})" },
@@ -70,8 +70,8 @@ namespace Samples.Controllers {
             );
         }
 
-        public IActionResult ShippersLookup(DataSourceLoadOptions options) {
-            return DataSourceLoadResult.Create(
+        public object ShippersLookup(DataSourceLoadOptions options) {
+            return DataSourceLoader.Load(
                 from s in _nwind.Shippers
                 orderby s.CompanyName
                 select new { Value = s.ShipperID, Text = s.CompanyName },
