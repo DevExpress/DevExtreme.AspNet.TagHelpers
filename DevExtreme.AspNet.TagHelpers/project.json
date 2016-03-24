@@ -12,7 +12,7 @@
         "Microsoft.AspNet.Mvc.Formatters.Json": "6.0.0-rc1-final",
         "Microsoft.AspNet.Razor.Runtime": "4.0.0-rc1-final",
         "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-final",
-        "DevExtreme.AspNet.Data": "1.0.0-rc1-build2"
+        "DevExtreme.AspNet.Data": "1.0.0-rc1-*"
     },
 
     "frameworks": {
