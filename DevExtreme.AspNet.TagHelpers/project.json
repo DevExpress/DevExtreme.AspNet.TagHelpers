@@ -16,12 +16,12 @@
     },
 
     "frameworks": {
-        "dotnet5.4": {
+        "dnxcore50": {
             "dependencies": {
                 "System.Runtime.Serialization.Primitives": "4.0.0"
             }
         },
-        "net451": {
+        "dnx451": {
             "frameworkAssemblies": {
                 "System.Runtime.Serialization": ""
             }
