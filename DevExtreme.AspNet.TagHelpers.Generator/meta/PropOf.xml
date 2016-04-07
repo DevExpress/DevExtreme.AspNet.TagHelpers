@@ -3,8 +3,10 @@
 <root>
     <entry docid="dxchartoptions_maxbubblesize" propertyOf="BubbleSeries" />
     <entry docid="dxchartoptions_minbubblesize" propertyOf="BubbleSeries" />
-    <entry docid="dxchartoptions_tooltip_location" propertyOf="BarSeries" />
+    <entry docid="dxchartoptions_negativesaszeroes" propertyOf="StackedBarSeries,FullStackedBarSeries,StackedAreaSeries,FullStackedAreaSeries,StackedLineSeries,FullStackedLineSeries,StackedSplineSeries,FullStackedSplineSeries,StackedSplineAreaSeries,FullStackedSplineAreaSeries" />
+    <entry docid="dxchartoptions_tooltip_location" propertyOf="BarSeries,StackedBarSeries,FullStackedBarSeries,BubbleSeries,StockSeries,CandleStickSeries" />
     <entry docid="dxpiechartoptions_innerradius" propertyOf="DoughnutSeries" />
+    <entry docid="dxpolarchartoptions_negativesaszeroes" propertyOf="StackedBarSeries,FullStackedBarSeries,StackedAreaSeries,FullStackedAreaSeries,StackedLineSeries,FullStackedLineSeries,StackedSplineSeries,FullStackedSplineSeries,StackedSplineAreaSeries,FullStackedSplineAreaSeries" />
     <entry docid="commonseriesoptions_border" propertyOf="AreaSeries,StackedAreaSeries,FullStackedAreaSeries,FullStackedSplineAreaSeries,SplineAreaSeries,StepAreaSeries,RangeAreaSeries,BarSeries,StackedBarSeries,FullStackedBarSeries,RangeBarSeries,BubbleSeries" />
     <entry docid="commonseriesoptions_border_color" propertyOf="AreaSeries,StackedAreaSeries,FullStackedAreaSeries,StackedSplineAreaSeries,FullStackedSplineAreaSeries,SplineAreaSeries,StepAreaSeries,RangeAreaSeries,BarSeries,StackedBarSeries,FullStackedBarSeries,RangeBarSeries,BubbleSeries" />
     <entry docid="commonseriesoptions_border_dashstyle" propertyOf="AreaSeries,StackedAreaSeries,FullStackedAreaSeries,StackedSplineAreaSeries,FullStackedSplineAreaSeries,SplineAreaSeries,StepAreaSeries,RangeAreaSeries,BarSeries,StackedBarSeries,FullStackedBarSeries,RangeBarSeries,BubbleSeries" />
