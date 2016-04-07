@@ -3,7 +3,8 @@
 }
 
 <dx-scheduler height="600" current-date="new DateTime(2015, 5, 25)" first-day-of-week="FirstDayOfWeek.Sunday"
-              views="new[] { SchedulerView.Week, SchedulerView.Month }" current-view="SchedulerView.Month" remote-filtering="true">
+              views="new[] { SchedulerView.Week, SchedulerView.Month }" current-view="SchedulerView.Month" remote-filtering="true"
+              recurrence-rule-expr="">
     <datasource controller="GoogleCalendar" load-action="Appointments" />
     <editing allow-adding="false" allow-deleting="false" allow-resizing="false" allow-dragging="false" allow-updating="false" />
 </dx-scheduler>
