@@ -306,17 +306,9 @@ namespace DevExtreme.AspNet.TagHelpers.Generator {
                         "DevExtreme.AspNet.TagHelpers.dxRangeSelector.Chart.CommonSeriesSettings.StepLine.Label.Format",
                         "DevExtreme.AspNet.TagHelpers.dxRangeSelector.Chart.CommonSeriesSettings.Stock.Label.Format",
                         "DevExtreme.AspNet.TagHelpers.dxRangeSelector.Chart.Series.Label.Format",
+                        "DevExtreme.AspNet.TagHelpers.dxSparkline.Tooltip.Format",
                         "DevExtreme.AspNet.TagHelpers.Data.Datasource.Field.Format"
                     }
-                )
-            },
-            {
-                "SparklineTooltipFormat",
-                new EnumInfo(
-                    new[] {
-                        "billions", "currency", "decimal", "exponential", "fixedPoint", "largeNumber", "millions",
-                        "thousands", "trillions" },
-                    new[] { "DevExtreme.AspNet.TagHelpers.dxSparkline.Tooltip.Format" }
                 )
             },
             {
@@ -1309,7 +1301,7 @@ namespace DevExtreme.AspNet.TagHelpers.Generator {
             {
                 "PivotGridSortMode",
                 new EnumInfo(
-                    new[] { "caption", "value" },
+                    new[] { "displayText", "value" },
                     new[] { "DevExtreme.AspNet.TagHelpers.Data.Datasource.Field.SortBy" }
                 )
             },

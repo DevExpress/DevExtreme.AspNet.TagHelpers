@@ -35,7 +35,7 @@
           <IntellisenseObjectPropertyInfo Name="calculateCustomSummary" Description="Allows you to use a custom aggregate function to calculate the summary values. Cannot be used for the XmlaStore store type." Type="function(options)">
             <Values />
           </IntellisenseObjectPropertyInfo>
-          <IntellisenseObjectPropertyInfo Name="calculateSummaryValue" Description="Specifies a callback function that allows you to modify summary values after they are calculated." Default="undefined" Type="function(e){}">
+          <IntellisenseObjectPropertyInfo Name="calculateSummaryValue" Description="Specifies a callback function that allows you to modify summary values after they are calculated." Default="undefined" Type="function(e)">
             <Values />
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="caption" Description="A caption that will be displayed in the pivot grid's field chooser to identify the field." Default="undefined" Type="string">
@@ -98,13 +98,12 @@
           <IntellisenseObjectPropertyInfo Name="groupIndex" Description="The index of the field within a group." Default="undefined" Type="number">
             <Values />
           </IntellisenseObjectPropertyInfo>
-          <IntellisenseObjectPropertyInfo Name="groupInterval" Description="Specifies how the values of the current field are combined into groups. Cannot be used for the XmlaStore store type." Default="undefined" Type="string | number">
+          <IntellisenseObjectPropertyInfo Name="groupInterval" Description="Specifies how the values of the current field are combined into groups. Cannot be used for the XmlaStore store type." Default="undefined" Type="string|number">
             <Values>
               <IntellisenseInfo Name="'year' " />
               <IntellisenseInfo Name=" 'quarter' " />
               <IntellisenseInfo Name=" 'month' " />
-              <IntellisenseInfo Name=" 'month' " />
-              <IntellisenseInfo Name=" 'day' " />
+              <IntellisenseInfo Name="  'day' " />
               <IntellisenseInfo Name=" 'dayOfWeek'" />
             </Values>
           </IntellisenseObjectPropertyInfo>
@@ -114,7 +113,7 @@
           <IntellisenseObjectPropertyInfo Name="isMeasure" Description="Specifies whether the field should be treated as a Data Field." Default="undefined" Type="boolean">
             <Values />
           </IntellisenseObjectPropertyInfo>
-          <IntellisenseObjectPropertyInfo Name="precision" Description="Specifies a precision for formatted field values." Default="undefined" Type="numeric">
+          <IntellisenseObjectPropertyInfo Name="precision" Description="Specifies a precision for formatted field values." Default="undefined" Type="number">
             <Values />
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="runningTotal" Description="Specifies whether to summarize each next summary value with the previous one by rows or columns." Default="undefined" Type="string">
@@ -134,11 +133,11 @@
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="sortBy" Description="Specifies how field data should be sorted. Can be used for the XmlaStore store type only." Default="undefined" Type="string">
             <Values>
-              <IntellisenseInfo Name="'caption' " />
+              <IntellisenseInfo Name="'displayText' " />
               <IntellisenseInfo Name=" 'value'" />
             </Values>
           </IntellisenseObjectPropertyInfo>
-          <IntellisenseObjectPropertyInfo Name="sortBySummaryField" Description="Specifies the data field against which the header items of this field should be sorted." Default="undefined" Type="string">
+          <IntellisenseObjectPropertyInfo Name="sortBySummaryField" Description="Sorts the header items of this field by the summary values of another field." Default="undefined" Type="string">
             <Values />
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="sortBySummaryPath" Description="The array of field names that specify a path to column/row whose summary field is used for sorting of this field's header items." Default="undefined" Type="array">
@@ -147,7 +146,7 @@
           <IntellisenseObjectPropertyInfo Name="sortingMethod" Description="Specifies how to sort the header items." Default="undefined" Type="function(a, b)">
             <Values />
           </IntellisenseObjectPropertyInfo>
-          <IntellisenseObjectPropertyInfo Name="sortOrder" Description="Specifies the initial sort order of field values." Default="'asc'" Type="string">
+          <IntellisenseObjectPropertyInfo Name="sortOrder" Description="Specifies the sort order of field values." Default="'asc'" Type="string">
             <Values>
               <IntellisenseInfo Name="'asc' " />
               <IntellisenseInfo Name=" 'desc'" />
@@ -188,13 +187,13 @@
       <IntellisenseObjectPropertyInfo Name="onChanged" Description="A handler for the changed event." Type="function">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="onFieldsPrepared" Description="A handler for the fieldsPrepared event." Type="function">
+      <IntellisenseObjectPropertyInfo Name="onFieldsPrepared" Description="A handler for the fieldsPrepared event." Type="function(fields)">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="onLoadError" Description="A handler for the loadError event." Type="function">
+      <IntellisenseObjectPropertyInfo Name="onLoadError" Description="A handler for the loadError event." Type="function(error)">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="onLoadingChanged" Description="A handler for the loadingChanged event." Type="function">
+      <IntellisenseObjectPropertyInfo Name="onLoadingChanged" Description="A handler for the loadingChanged event." Type="function(isloading)">
         <Values />
       </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="retrieveFields" Description="Indicates whether or not the automatic field generation from data in the Store is enabled." Default="true" Type="boolean">
