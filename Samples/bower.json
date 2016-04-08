@@ -4,7 +4,7 @@
 
     "dependencies": {
         "bootstrap": "3.3.5",
-        "devextreme": "15.2.8",
+        "devextreme": "15.2.9",
         "devextreme-aspnet-data": "^1.0.0"
     }
 }
