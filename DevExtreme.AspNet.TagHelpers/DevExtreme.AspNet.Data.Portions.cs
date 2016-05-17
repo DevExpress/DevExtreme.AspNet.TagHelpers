@@ -1,6 +1,6 @@
 ﻿using DevExtreme.AspNet.Data.Helpers;
-using Microsoft.AspNet.Mvc;
-using Microsoft.AspNet.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Net.Http.Headers;
 using Newtonsoft.Json;
 using System;
@@ -21,10 +21,11 @@ namespace DevExtreme.AspNet.Data {
 
     public class DataSourceLoadOptionsBinder : IModelBinder {
 
-        public Task<ModelBindingResult> BindModelAsync(ModelBindingContext bindingContext) {
+        public Task BindModelAsync(ModelBindingContext bindingContext) {
             var loadOptions = new DataSourceLoadOptions();
             DataSourceLoadOptionsParser.Parse(loadOptions, key => bindingContext.ValueProvider.GetValue(key).FirstOrDefault());
-            return ModelBindingResult.SuccessAsync(bindingContext.ModelName, loadOptions);
+            bindingContext.Result = ModelBindingResult.Success(bindingContext.ModelName, loadOptions);
+            return Task.CompletedTask;
         }
 
     }
@@ -40,7 +41,7 @@ namespace DevExtreme.AspNet.Data {
     public class DataSourceLoadResult<T> : ContentResult {
 
         public DataSourceLoadResult(IEnumerable<T> source, DataSourceLoadOptions loadOptions) {
-            ContentType = new MediaTypeHeaderValue("application/json");
+            ContentType = "application/json";
             Content = JsonConvert.SerializeObject(DataSourceLoader.Load(source, loadOptions));
         }
 

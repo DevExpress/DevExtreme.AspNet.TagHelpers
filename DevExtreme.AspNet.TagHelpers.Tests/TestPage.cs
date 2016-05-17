@@ -1,13 +1,16 @@
-﻿using Microsoft.AspNet.Mvc.Razor;
-using Microsoft.AspNet.Mvc.Rendering;
-using Microsoft.AspNet.Razor.Runtime.TagHelpers;
-using Microsoft.AspNet.Razor.TagHelpers;
-using Microsoft.Extensions.WebEncoders;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc.ViewFeatures.Internal;
+using Microsoft.AspNetCore.Razor.Runtime.TagHelpers;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 using System;
+using System.Buffers;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 
 namespace DevExtreme.AspNet.TagHelpers.Tests {
@@ -16,14 +19,19 @@ namespace DevExtreme.AspNet.TagHelpers.Tests {
         Exception _execError;
         StringBuilder _outputBuilder = new StringBuilder();
         TagHelperRunner _runner = new TagHelperRunner();
-        TagHelperScopeManager _scopeManager = new TagHelperScopeManager();
+        TagHelperScopeManager _scopeManager;
         TagHelperExecutionContext _execContext;
 
         HierarchicalTagHelper _topLevelTag;
 
         public TestPage() {
-            HtmlEncoder = new HtmlEncoder();
+            _scopeManager = new TagHelperScopeManager(StartTagHelperWritingScope, EndTagHelperWritingScope);
+
+            HtmlEncoder = HtmlEncoder.Default;
             ViewContext = new ViewContext {
+                HttpContext = new DefaultHttpContext {
+                    RequestServices = new ServiceProviderMock()
+                },
                 Writer = new StringWriter(_outputBuilder)
             };
         }
@@ -57,7 +65,7 @@ namespace DevExtreme.AspNet.TagHelpers.Tests {
             if(_execError != null)
                 return;
 
-            _execContext = _scopeManager.Begin("", 0, "", WrapExecuteChildContent(executeChildContent), StartTagHelperWritingScope, EndTagHelperWritingScope);
+            _execContext = _scopeManager.Begin("", 0, "", WrapExecuteChildContent(executeChildContent));
 
             foreach(var tag in tags) {
                 if(_topLevelTag == null)
@@ -67,8 +75,8 @@ namespace DevExtreme.AspNet.TagHelpers.Tests {
             }
 
             try {
-                _execContext.Output = await _runner.RunAsync(_execContext);
-                await WriteTagHelperAsync(_execContext);
+                await _runner.RunAsync(_execContext);
+                Write(_execContext.Output);
             } catch(Exception x) {
 #warning see https://github.com/aspnet/Hosting/issues/484
                 _execError = x;
@@ -84,6 +92,21 @@ namespace DevExtreme.AspNet.TagHelpers.Tests {
 
                 return Task.FromResult(true); // see http://stackoverflow.com/a/13127229
             };
+        }
+
+
+        class ServiceProviderMock : IServiceProvider {
+            IViewBufferScope _viewBufferScope = new MemoryPoolViewBufferScope(
+                ArrayPool<ViewBufferValue>.Shared,
+                ArrayPool<char>.Shared
+            );
+
+            public object GetService(Type serviceType) {
+                if(serviceType == typeof(IViewBufferScope))
+                    return _viewBufferScope;
+
+                return null;
+            }
         }
     }
 

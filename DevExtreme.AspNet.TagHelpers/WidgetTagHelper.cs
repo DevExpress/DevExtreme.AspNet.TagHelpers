@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNet.Razor.TagHelpers;
+﻿using Microsoft.AspNetCore.Razor.TagHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +20,7 @@ namespace DevExtreme.AspNet.TagHelpers {
 
             var id = GetIDForRendering(ID);
             output.TagName = "div";
-            output.Attributes["id"] = id;
+            output.Attributes.Add("id", id);
             output.Content.Clear();
 
             output.PostElement.AppendHtml("<script>" + FormatStartupScript(id, innerScripts) + "</script>");

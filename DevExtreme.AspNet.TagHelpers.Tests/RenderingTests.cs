@@ -1,7 +1,7 @@
 ﻿using DevExtreme.AspNet.TagHelpers.Data;
-using Microsoft.AspNet.Mvc;
-using Microsoft.AspNet.Mvc.Routing;
-using Microsoft.AspNet.Razor.TagHelpers;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Routing;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -239,6 +239,10 @@ namespace DevExtreme.AspNet.TagHelpers.Tests {
 
         class UrlHelperMock : IUrlHelper {
             public const string UNRESOLVABLE_ACTION = "UnresolvableAction";
+
+            public ActionContext ActionContext {
+                get { throw new NotImplementedException(); }
+            }
 
             public string Action(UrlActionContext actionContext) {
                 if(actionContext.Action == UNRESOLVABLE_ACTION)

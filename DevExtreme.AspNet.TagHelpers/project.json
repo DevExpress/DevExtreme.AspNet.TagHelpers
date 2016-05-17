@@ -4,27 +4,24 @@
     "authors": [ "%meta_company%" ],
     "copyright": "%meta_copyright%",
     "description": "%meta_description%",
-    "licenseUrl": "%meta_license_url%",
-    "projectUrl": "%meta_project_url%",
 
-    "dependencies": {
-        "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-final",
-        "Microsoft.AspNet.Mvc.Formatters.Json": "6.0.0-rc1-final",
-        "Microsoft.AspNet.Razor.Runtime": "4.0.0-rc1-final",
-        "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-final",
-        "DevExtreme.AspNet.Data": "1.0.0-rc1-*"
+    "packOptions": {
+        "licenseUrl": "%meta_license_url%",
+        "projectUrl": "%meta_project_url%"
     },
 
+    "dependencies": {
+        "Microsoft.AspNetCore.Mvc.Core": "1.0.0-rc2-final",
+        "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.0-rc2-final",
+        "Microsoft.AspNetCore.Razor.Runtime": "1.0.0-rc2-final",
+        "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.0-rc2-final",
+        "DevExtreme.AspNet.Data": "1.0.0-rc1-*"
+    },
+    // "System.Runtime.Serialization.Primitives": "4.0.0"
+
     "frameworks": {
-        "dnxcore50": {
-            "dependencies": {
-                "System.Runtime.Serialization.Primitives": "4.0.0"
-            }
-        },
-        "dnx451": {
-            "frameworkAssemblies": {
-                "System.Runtime.Serialization": ""
-            }
+        "netstandard1.3": {
+            "imports": [ "dnxcore50" ]
         }
     }
 }

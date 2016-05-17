@@ -1,5 +1,5 @@
 ﻿using DevExtreme.AspNet.TagHelpers.Data;
-using Microsoft.AspNet.Razor.TagHelpers;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

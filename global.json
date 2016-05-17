@@ -1,8 +1,3 @@
 ﻿{
-  "projects": [ "DevExtreme.AspNet.TagHelpers", "DevExtreme.AspNet.TagHelpers.Tests", "DevExtreme.AspNet.TagHelpers.Generator", "Samples" ],
-  "sdk": {
-    "version": "1.0.0-rc1-update1",
-    "runtime": "clr",
-    "architecture": "x86"
-  }
+  "projects": [ "DevExtreme.AspNet.TagHelpers", "DevExtreme.AspNet.TagHelpers.Tests", "DevExtreme.AspNet.TagHelpers.Generator", "Samples" ]
 }
