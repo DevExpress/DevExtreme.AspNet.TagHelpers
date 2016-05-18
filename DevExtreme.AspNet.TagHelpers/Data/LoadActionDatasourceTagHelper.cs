@@ -54,7 +54,7 @@ namespace DevExtreme.AspNet.TagHelpers.Data {
                 config[name + "Method"] = method;
         }
 
-        string GetActionUrl(string action) {            
+        string GetActionUrl(string action) {
             var result = _urlHelperFactory.GetUrlHelper(ViewContext).Action(action, Controller);
             if(String.IsNullOrEmpty(result))
                 throw new Exception($"Unable to resolve Datasource action: '{Controller}.{action}'");
