@@ -5,12 +5,12 @@
 <dx-pivot-grid height="500" allow-expand-all="true" allow-sorting="true" allow-sorting-by-summary="true" allow-filtering="true">
 
     <datasource controller="Northwind" load-action="SalesCube">
-        <field datafield="CategoryName" area="PivotGridArea.Row" width="120" />
-        <field datafield="ProductName" area="PivotGridArea.Row" width="150" />
-        <field datafield="OrderDate" area="PivotGridArea.Column" datatype="PivotGridDataType.Date" />
-        <field datafield="Sum" datatype="PivotGridDataType.Number" summary-type="SummaryType.Sum" format="Format.Currency" area="PivotGridArea.Data" />
+        <field datafield="CategoryName" area="Row" width="120" />
+        <field datafield="ProductName" area="Row" width="150" />
+        <field datafield="OrderDate" area="Column" datatype="Date" />
+        <field datafield="Sum" datatype="Number" summary-type="Sum" format="Currency" area="Data" />
     </datasource>
 
-    <field-chooser enabled="true" layout="PivotGridFieldChooserLayout.Layout0" />
-    <scrolling mode="PivotGridScrollingMode.Virtual" />
+    <field-chooser enabled="true" layout="Layout0" />
+    <scrolling mode="Virtual" />
 </dx-pivot-grid>

@@ -9,11 +9,11 @@
     <size height="400" />
 
     <chart>
-        <common-series-settings type="SeriesType.StepArea" argument-field="Month" />
+        <common-series-settings type="StepArea" argument-field="Month" />
         <series value-field="TotalAmount" color="yellow" />
         <series value-field="Amount" />
     </chart>
 
-    <scale value-type="ChartDataType.DateTime" tick-interval="new { months = 1 }" minor-tick-interval="new { months = 1 }" />
-    <slider-marker format="Format.MonthAndYear" />
+    <scale value-type="DateTime" tick-interval="new { months = 1 }" minor-tick-interval="new { months = 1 }" />
+    <slider-marker format="MonthAndYear" />
 </dx-range-selector>

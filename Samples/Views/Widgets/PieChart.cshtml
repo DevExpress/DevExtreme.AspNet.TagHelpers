@@ -2,16 +2,16 @@
     ViewBag.WidgetName = "Pie Chart";
 }
 
-<dx-pie-chart type="PieChartType.Donut" inner-radius="0.2">
+<dx-pie-chart type="Donut" inner-radius="0.2">
     <datasource controller="Northwind" load-action="SalesByCategory" />
 
     <title text="Sales by Category" />
     <size height="600" />
 
-    <legend orientation="LegendOrientation.Horizontal"
-            item-text-position="Position.Right"
-            horizontal-alignment="HorizontalAlignment.Center"
-            vertical-alignment="VerticalEdgeAlignment.Bottom"
+    <legend orientation="Horizontal"
+            item-text-position="Right"
+            horizontal-alignment="Center"
+            vertical-alignment="Bottom"
             column-count="4" />
 
     <series argument-field="Category" value-field="Count">
@@ -20,7 +20,7 @@
 
     <series argument-field="Category" value-field="Sales">
         <label visible="true"
-               format="Format.Currency"
+               format="Currency"
                position="PieChartLabelPosition.Columns"
                customize-text="customizeSalesLabel">
             <connector visible="true" width="0.5" />
