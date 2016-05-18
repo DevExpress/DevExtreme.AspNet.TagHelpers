@@ -1,5 +1,5 @@
-using Microsoft.Data.Entity;
-using Microsoft.Data.Entity.Metadata;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Samples.Models.Northwind {
     public partial class NorthwindContext : DbContext {
@@ -23,7 +23,7 @@ namespace Samples.Models.Northwind {
 
                 entity.HasIndex(e => new { e.CompanyName }).HasName("CompanyName");
 
-                entity.Property(e => e.CustomerID).HasColumnType("nchar");
+                entity.Property(e => e.CustomerID).HasColumnType("nchar(5)");
             });
 
             modelBuilder.Entity<Employee>(entity => {
@@ -49,7 +49,7 @@ namespace Samples.Models.Northwind {
 
                 entity.Property(e => e.Discount).HasDefaultValue(0f);
 
-                entity.Property(e => e.Quantity).HasDefaultValue(1);
+                entity.Property(e => e.Quantity).HasDefaultValue((short)1);
 
                 entity.Property(e => e.UnitPrice)
                     .HasColumnType("money")
@@ -69,7 +69,7 @@ namespace Samples.Models.Northwind {
 
                 entity.HasIndex(e => e.ShippedDate).HasName("ShippedDate");
 
-                entity.Property(e => e.CustomerID).HasColumnType("nchar");
+                entity.Property(e => e.CustomerID).HasColumnType("nchar(5)");
 
                 entity.Property(e => e.Freight)
                     .HasColumnType("money")
@@ -91,15 +91,15 @@ namespace Samples.Models.Northwind {
 
                 entity.Property(e => e.Discontinued).HasDefaultValue(false);
 
-                entity.Property(e => e.ReorderLevel).HasDefaultValue(0);
+                entity.Property(e => e.ReorderLevel).HasDefaultValue((short)0);
 
                 entity.Property(e => e.UnitPrice)
                     .HasColumnType("money")
                     .HasDefaultValue(0m);
 
-                entity.Property(e => e.UnitsInStock).HasDefaultValue(0);
+                entity.Property(e => e.UnitsInStock).HasDefaultValue((short)0);
 
-                entity.Property(e => e.UnitsOnOrder).HasDefaultValue(0);
+                entity.Property(e => e.UnitsOnOrder).HasDefaultValue((short)0);
             });
 
             modelBuilder.Entity<Supplier>(entity => {

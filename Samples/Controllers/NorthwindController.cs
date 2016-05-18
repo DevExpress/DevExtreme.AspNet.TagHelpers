@@ -1,6 +1,6 @@
 ﻿using DevExtreme.AspNet.Data;
-using Microsoft.AspNet.Mvc;
-using Microsoft.Data.Entity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using Samples.Models.Northwind;
 using System;
@@ -43,11 +43,11 @@ namespace Samples.Controllers {
                    };
         }
 
-        public object Orders(DataSourceLoadOptions options) {
+        public object Orders([DataSourceLoadOptions] DataSourceLoadOptions options) {
             return DataSourceLoader.Load(_nwind.Orders, options);
         }
 
-        public object OrderDetails(int orderID, DataSourceLoadOptions options) {
+        public object OrderDetails(int orderID, [DataSourceLoadOptions] DataSourceLoadOptions options) {
             return DataSourceLoader.Load(
                 from i in _nwind.Order_Details
                 where i.OrderID == orderID
@@ -61,7 +61,7 @@ namespace Samples.Controllers {
             );
         }
 
-        public object CustomersLookup(DataSourceLoadOptions options) {
+        public object CustomersLookup([DataSourceLoadOptions] DataSourceLoadOptions options) {
             return DataSourceLoader.Load(
                 from c in _nwind.Customers
                 orderby c.CompanyName
@@ -70,7 +70,7 @@ namespace Samples.Controllers {
             );
         }
 
-        public object ShippersLookup(DataSourceLoadOptions options) {
+        public object ShippersLookup([DataSourceLoadOptions] DataSourceLoadOptions options) {
             return DataSourceLoader.Load(
                 from s in _nwind.Shippers
                 orderby s.CompanyName

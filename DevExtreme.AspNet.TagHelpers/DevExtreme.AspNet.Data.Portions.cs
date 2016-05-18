@@ -30,6 +30,15 @@ namespace DevExtreme.AspNet.Data {
 
     }
 
+    // Temporary workaround for https://github.com/aspnet/Mvc/issues/4652    
+    public class DataSourceLoadOptionsAttribute : ModelBinderAttribute {
+
+        public DataSourceLoadOptionsAttribute() {
+            BinderType = typeof(DataSourceLoadOptionsBinder);
+        }
+
+    }
+
     [Obsolete("Use DataSourceLoader.Load instead")]
     public static class DataSourceLoadResult {
         public static ContentResult Create<T>(IEnumerable<T> source, DataSourceLoadOptions loadOptions) {

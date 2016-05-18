@@ -1,5 +1,5 @@
 ﻿using DevExtreme.AspNet.Data;
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ namespace Samples.Controllers {
 
     public class GoogleCalendarController {
 
-        public async Task<object> Appointments(DataSourceLoadOptions loadOptions) {
+        public async Task<object> Appointments([DataSourceLoadOptions] DataSourceLoadOptions loadOptions) {
             var url = "https://www.googleapis.com/calendar/v3/calendars/"
                 + "f7jnetm22dsjc3npc2lu3buvu4@group.calendar.google.com"
                 + "/events?key=" + "AIzaSyBnNAISIUKe6xdhq1_rjor2rxoI3UlMY7k";
