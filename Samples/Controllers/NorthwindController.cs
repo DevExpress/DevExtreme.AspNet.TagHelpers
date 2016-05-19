@@ -1,5 +1,6 @@
 ﻿using DevExtreme.AspNet.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using Samples.Models.Northwind;
@@ -18,7 +19,7 @@ using System.Threading.Tasks;
 
 namespace Samples.Controllers {
 
-    public class NorthwindController {
+    public class NorthwindController : Controller {
         NorthwindContext _nwind;
 
         public NorthwindController(NorthwindContext nwind) {
@@ -79,17 +80,30 @@ namespace Samples.Controllers {
             );
         }
 
-        public void UpdateOrder(int key, string values) {
+        public IActionResult UpdateOrder(int key, string values) {
             var order = _nwind.Orders.First(o => o.OrderID == key);
             JsonConvert.PopulateObject(values, order);
+
+            if(!TryValidateModel(order))
+                return BadRequest(GetFullErrorString());
+
             _nwind.SaveChanges();
+
+            return Ok();
         }
 
-        public void InsertOrder(string values) {
+        public IActionResult InsertOrder(string values) {
             var order = new Order();
             JsonConvert.PopulateObject(values, order);
+
+            if(!TryValidateModel(order))
+                return BadRequest(GetFullErrorString());
+
+
             _nwind.Orders.Add(order);
             _nwind.SaveChanges();
+
+            return Ok();
         }
 
         public void DeleteOrder(int key) {
@@ -143,6 +157,18 @@ namespace Samples.Controllers {
                        Sales = g.Sum(d => d.Quantity * d.UnitPrice)
                    };
         }
+
+        string GetFullErrorString() {
+            var messages = new List<string>();
+
+            foreach(var entry in ModelState.Values) {
+                foreach(var error in entry.Errors)
+                    messages.Add(error.ErrorMessage);
+            }
+
+            return String.Join(" ", messages);
+        }
+
     }
 
 }
