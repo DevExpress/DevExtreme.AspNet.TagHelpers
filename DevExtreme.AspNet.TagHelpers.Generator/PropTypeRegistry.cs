@@ -53,6 +53,7 @@ namespace DevExtreme.AspNet.TagHelpers.Generator {
             { "DevExtreme.AspNet.TagHelpers.dxDataGrid.Column.EditorOptions", CLR_OBJECT },
             { "DevExtreme.AspNet.TagHelpers.dxDataGrid.Column.FilterValues", CLR_ARRAY_OBJECT },
             { "DevExtreme.AspNet.TagHelpers.dxDataGrid.Column.FormItem", CLR_OBJECT },
+            { "DevExtreme.AspNet.TagHelpers.dxDataGrid.Column.HeaderFilter.GroupInterval", CLR_OBJECT },
             { "DevExtreme.AspNet.TagHelpers.dxDataGrid.Column.Lookup.DisplayExpr", CLR_STRING },
             { "DevExtreme.AspNet.TagHelpers.dxDataGrid.Column.ValidationRules", CLR_ARRAY_OBJECT },
             { "DevExtreme.AspNet.TagHelpers.dxDataGrid.Editing.Form", CLR_OBJECT },
