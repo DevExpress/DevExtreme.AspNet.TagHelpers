@@ -1,6 +1,5 @@
 ﻿using DevExtreme.AspNet.Data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using Samples.Models.Northwind;
