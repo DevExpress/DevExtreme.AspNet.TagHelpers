@@ -12,11 +12,6 @@ namespace DevExtreme.AspNet.Data {
 
     [ModelBinder(BinderType = typeof(DataSourceLoadOptionsBinder))]
     public class DataSourceLoadOptions : DataSourceLoadOptionsBase {
-
-        static DataSourceLoadOptions() {
-            Compat.EF3361 = true;
-        }
-
     }
 
     public class DataSourceLoadOptionsBinder : IModelBinder {
