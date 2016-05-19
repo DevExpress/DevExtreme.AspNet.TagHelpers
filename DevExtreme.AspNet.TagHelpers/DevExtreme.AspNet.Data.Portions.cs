@@ -34,22 +34,4 @@ namespace DevExtreme.AspNet.Data {
 
     }
 
-    [Obsolete("Use DataSourceLoader.Load instead")]
-    public static class DataSourceLoadResult {
-        public static ContentResult Create<T>(IEnumerable<T> source, DataSourceLoadOptions loadOptions) {
-            return new DataSourceLoadResult<T>(source, loadOptions);
-        }
-    }
-
-    [Obsolete("Use DataSourceLoader.Load instead")]
-    public class DataSourceLoadResult<T> : ContentResult {
-
-        public DataSourceLoadResult(IEnumerable<T> source, DataSourceLoadOptions loadOptions) {
-            ContentType = "application/json";
-            Content = JsonConvert.SerializeObject(DataSourceLoader.Load(source, loadOptions));
-        }
-
-    }
-
-
 }
