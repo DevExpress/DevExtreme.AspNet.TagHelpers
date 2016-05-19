@@ -4,14 +4,14 @@
 
 <dx-chart>
     <datasource controller="Northwind" load-action="SalesByCategoryYear" />
-    <common-series-settings argument-field="Category" value-field="Sales" type="SeriesType.Bar" />
+    <common-series-settings argument-field="Category" value-field="Sales" type="Bar" />
     <series-template name-field="Year" />
 
     <value-axis>
-        <label format="Format.Currency" />
+        <label format="Currency" />
     </value-axis>
 
     <title text="Sales By Category/Year" />
-    <legend vertical-alignment="VerticalEdgeAlignment.Bottom" horizontal-alignment="HorizontalAlignment.Center" />
-    <tooltip enabled="true" format="Format.Currency" />
+    <legend vertical-alignment="Bottom" horizontal-alignment="Center" />
+    <tooltip enabled="true" format="Currency" />
 </dx-chart>

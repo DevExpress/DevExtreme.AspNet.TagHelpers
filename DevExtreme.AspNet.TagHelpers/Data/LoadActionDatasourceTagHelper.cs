@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNet.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc.Routing;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -8,10 +12,10 @@ using System.Threading.Tasks;
 namespace DevExtreme.AspNet.TagHelpers.Data {
 
     public partial class LoadActionDatasourceTagHelper : StoreDatasourceTagHelper {
-        IUrlHelper _urlHelper;
+        IUrlHelperFactory _urlHelperFactory;
 
-        public LoadActionDatasourceTagHelper(IUrlHelper urlHelper) {
-            _urlHelper = urlHelper;
+        public LoadActionDatasourceTagHelper(IUrlHelperFactory urlHelperFactory) {
+            _urlHelperFactory = urlHelperFactory;
         }
 
         public string Controller { get; set; }
@@ -23,6 +27,9 @@ namespace DevExtreme.AspNet.TagHelpers.Data {
         public string DeleteAction { get; set; }
         public string DeleteMethod { get; set; }
         public string OnBeforeSend { get; set; }
+
+        [ViewContext, HtmlAttributeNotBound]
+        public ViewContext ViewContext { get; set; }
 
         protected override string FormatStoreFactory(string args) {
             return "DevExpress.data.AspNet.createStore(" + args + ")";
@@ -48,7 +55,7 @@ namespace DevExtreme.AspNet.TagHelpers.Data {
         }
 
         string GetActionUrl(string action) {
-            var result = _urlHelper.Action(action, Controller);
+            var result = _urlHelperFactory.GetUrlHelper(ViewContext).Action(action, Controller);
             if(String.IsNullOrEmpty(result))
                 throw new Exception($"Unable to resolve Datasource action: '{Controller}.{action}'");
 

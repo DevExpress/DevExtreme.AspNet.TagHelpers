@@ -1,29 +1,26 @@
 version: '{build}'
 
-environment:
-  DNX_VERSION: '1.0.0-rc1-update1'
-
 cache:
-  - '%USERPROFILE%\.dnx\runtimes -> appveyor.yml'
-  - '%USERPROFILE%\.dnx\packages -> appveyor.yml, **\project.json'
+  - '%LOCALAPPDATA%\Microsoft\dotnet -> appveyor.yml'
+  - '%USERPROFILE%\.nuget\packages -> appveyor.yml, **\project.json'
 
 install:
-  - ps: iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.ps1')
-  - dnvm install %DNX_VERSION% -r clr
+  - ps: iex ((New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dotnet/cli/v1.0.0-rc2/scripts/obtain/install.ps1'))
+  - set PATH=%PATH%;%LOCALAPPDATA%\Microsoft\dotnet
 
 before_build:
-  - dnu restore --quiet
+  - dotnet restore -v minimal
   - powershell -File replace-meta.ps1 %APPVEYOR_BUILD_NUMBER% %APPVEYOR_REPO_TAG_NAME%
 
 build_script:
-  - cmd /c "cd DevExtreme.AspNet.TagHelpers.Generator && dnx run"
-  - dnu build DevExtreme.AspNet.TagHelpers --quiet    
+  - cmd /c "cd DevExtreme.AspNet.TagHelpers.Generator && dotnet run"
+  - dotnet build DevExtreme.AspNet.TagHelpers
 
 test_script:
-  - dnx -p DevExtreme.AspNet.TagHelpers.Tests test
+  - dotnet test DevExtreme.AspNet.TagHelpers.Tests 
 
 after_test:
-  - dnu pack DevExtreme.AspNet.TagHelpers --configuration=Release --quiet
+  - dotnet pack DevExtreme.AspNet.TagHelpers --configuration=Release
 
 artifacts:
   - path: DevExtreme.AspNet.TagHelpers\bin\Release\*.nupkg

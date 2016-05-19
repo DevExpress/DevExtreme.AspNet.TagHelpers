@@ -1,7 +1,7 @@
 ﻿using DevExtreme.AspNet.TagHelpers.Data;
-using Microsoft.AspNet.Mvc;
-using Microsoft.AspNet.Mvc.Routing;
-using Microsoft.AspNet.Razor.TagHelpers;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Routing;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,7 +50,7 @@ namespace DevExtreme.AspNet.TagHelpers.Tests {
 
         [Fact]
         public void RendersLoadActionDatasource_LoadOnly() {
-            page.Datasource = new LoadActionDatasourceTagHelper(new UrlHelperMock()) {
+            page.Datasource = new LoadActionDatasourceTagHelper(new UrlHelperFactoryMock()) {
                 Controller = "Controller1",
                 LoadAction = "Action1"
             };
@@ -68,7 +68,7 @@ namespace DevExtreme.AspNet.TagHelpers.Tests {
 
         [Fact]
         public void RendersLoadActionDatasource_AllActions() {
-            page.Datasource = new LoadActionDatasourceTagHelper(new UrlHelperMock()) {
+            page.Datasource = new LoadActionDatasourceTagHelper(new UrlHelperFactoryMock()) {
                 Controller = "Controller1",
                 UpdateAction = "Action2",
                 InsertAction = "Action3",
@@ -88,7 +88,7 @@ namespace DevExtreme.AspNet.TagHelpers.Tests {
 
         [Fact]
         public void RendersLoadActionDatasource_AllActionsWithMethods() {
-            page.Datasource = new LoadActionDatasourceTagHelper(new UrlHelperMock()) {
+            page.Datasource = new LoadActionDatasourceTagHelper(new UrlHelperFactoryMock()) {
                 Controller = "Controller1",
                 UpdateMethod = "Method1",
                 InsertMethod = "Method2",
@@ -106,7 +106,7 @@ namespace DevExtreme.AspNet.TagHelpers.Tests {
 
         [Fact]
         public void RendersLoadActionDatasource_OnBeforeSend() {
-            page.Datasource = new LoadActionDatasourceTagHelper(new UrlHelperMock()) {
+            page.Datasource = new LoadActionDatasourceTagHelper(new UrlHelperFactoryMock()) {
                 OnBeforeSend = "OnBeforeSendFunc"
             };
 
@@ -117,8 +117,8 @@ namespace DevExtreme.AspNet.TagHelpers.Tests {
 
         [Fact]
         public void ThrowsIfLoadActionDatasourceActionNotResolved() {
-            page.Datasource = new LoadActionDatasourceTagHelper(new UrlHelperMock()) {
-                LoadAction = UrlHelperMock.UNRESOLVABLE_ACTION
+            page.Datasource = new LoadActionDatasourceTagHelper(new UrlHelperFactoryMock()) {
+                LoadAction = UrlHelperFactoryMock.UNRESOLVABLE_ACTION
             };
 
             var err = Record.Exception(() => page.ExecuteSynchronously());
@@ -158,7 +158,7 @@ namespace DevExtreme.AspNet.TagHelpers.Tests {
 
         [Fact]
         public void RendersUrlDatasource() {
-            page.Datasource = new UrlDatasourceTagHelper(new UrlHelperMock()) {
+            page.Datasource = new UrlDatasourceTagHelper(new UrlHelperFactoryMock()) {
                 Url = "LoadUrl1"
             };
 
@@ -237,30 +237,41 @@ namespace DevExtreme.AspNet.TagHelpers.Tests {
             }
         }
 
-        class UrlHelperMock : IUrlHelper {
+        class UrlHelperFactoryMock : IUrlHelperFactory {
             public const string UNRESOLVABLE_ACTION = "UnresolvableAction";
 
-            public string Action(UrlActionContext actionContext) {
-                if(actionContext.Action == UNRESOLVABLE_ACTION)
-                    return null;
-
-                return $"ActionMock({actionContext.Controller}, {actionContext.Action})";
+            public IUrlHelper GetUrlHelper(ActionContext context) {
+                return new UrlHelperMock();
             }
 
-            public string Content(string contentPath) {
-                return $"ContentMock({contentPath})";
-            }
+            class UrlHelperMock : IUrlHelper {
 
-            public bool IsLocalUrl(string url) {
-                throw new NotImplementedException();
-            }
+                public ActionContext ActionContext {
+                    get { throw new NotImplementedException(); }
+                }
 
-            public string Link(string routeName, object values) {
-                throw new NotImplementedException();
-            }
+                public string Action(UrlActionContext actionContext) {
+                    if(actionContext.Action == UNRESOLVABLE_ACTION)
+                        return null;
 
-            public string RouteUrl(UrlRouteContext routeContext) {
-                throw new NotImplementedException();
+                    return $"ActionMock({actionContext.Controller}, {actionContext.Action})";
+                }
+
+                public string Content(string contentPath) {
+                    return $"ContentMock({contentPath})";
+                }
+
+                public bool IsLocalUrl(string url) {
+                    throw new NotImplementedException();
+                }
+
+                public string Link(string routeName, object values) {
+                    throw new NotImplementedException();
+                }
+
+                public string RouteUrl(UrlRouteContext routeContext) {
+                    throw new NotImplementedException();
+                }
             }
         }
 

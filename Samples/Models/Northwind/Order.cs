@@ -13,7 +13,7 @@ namespace Samples.Models.Northwind {
 
         [Key]
         public int OrderID { get; set; }
-        [MaxLength(5)]
+        [MaxLength(5), Required]
         public string CustomerID { get; set; }
         public int? EmployeeID { get; set; }
         public decimal? Freight { get; set; }
@@ -23,7 +23,7 @@ namespace Samples.Models.Northwind {
         public string ShipAddress { get; set; }
         [MaxLength(15)]
         public string ShipCity { get; set; }
-        [MaxLength(15)]
+        [MaxLength(15), Required]
         public string ShipCountry { get; set; }
         [MaxLength(40)]
         public string ShipName { get; set; }

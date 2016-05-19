@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Hosting;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Samples.Models.Northwind;
@@ -17,8 +17,7 @@ namespace Samples {
 
             services
                 .AddLogging()
-                .AddEntityFramework()
-                .AddSqlServer()
+                .AddEntityFrameworkSqlServer()
                 .AddDbContext<NorthwindContext>();
         }
 
@@ -34,8 +33,6 @@ namespace Samples {
             app.UseMvc(routes => routes.MapRoute(name: "default", template: "{controller=Widgets}/{action=DataGrid}"));
         }
 
-        // Entry point for the application.
-        public static void Main(string[] args) => WebApplication.Run<Startup>(args);
     }
 
 }

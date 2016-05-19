@@ -11,8 +11,12 @@
             <datasource controller="Northwind" load-action="CustomersLookup" key="Value" />
         </lookup>
     </column>
-    <column datafield="OrderDate" datatype="GridColumnDataType.Date" />
-    <column datafield="Freight" />
+    <column datafield="OrderDate" datatype="Date">
+        <header-filter group-interval='"quarter"' />
+    </column>
+    <column datafield="Freight">
+        <header-filter group-interval="100" />
+    </column>
     <column datafield="ShipCountry" />
     <column datafield="ShipRegion" />
     <column datafield="ShipVia">
@@ -24,9 +28,23 @@
     <group-panel visible="true" />
     <filter-row visible="true" />
     <header-filter visible="true " />
-    <scrolling mode="GridScrollingMode.Virtual" />
+    <scrolling mode="Virtual" />
 
     <editing allow-updating="true" allow-adding="true" allow-deleting="true" />
+
+    <remote-operations filtering="true"
+                       grouping="true"
+                       paging="true"
+                       sorting="true"
+                       summary="true" />
+
+    <grouping auto-expand-all="false" />
+
+    <summary>
+        <total-item column="Freight" summary-type="Sum" />
+        <group-item column="Freight" summary-type="Sum" />
+        <group-item summary-type="Count" />
+    </summary>
 
     <master-detail enabled="true" template="detailTemplate" />
 

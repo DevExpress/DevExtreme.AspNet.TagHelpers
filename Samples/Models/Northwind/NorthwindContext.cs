@@ -1,5 +1,5 @@
-using Microsoft.Data.Entity;
-using Microsoft.Data.Entity.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Samples.Models.Northwind {
     public partial class NorthwindContext : DbContext {
@@ -23,7 +23,7 @@ namespace Samples.Models.Northwind {
 
                 entity.HasIndex(e => new { e.CompanyName }).HasName("CompanyName");
 
-                entity.Property(e => e.CustomerID).HasColumnType("nchar");
+                entity.Property(e => e.CustomerID).HasColumnType("nchar(5)");
             });
 
             modelBuilder.Entity<Employee>(entity => {
@@ -47,13 +47,13 @@ namespace Samples.Models.Northwind {
 
                 entity.HasIndex(e => e.ProductID).HasName("ProductsOrder_Details");
 
-                entity.Property(e => e.Discount).HasDefaultValue(0f);
+                entity.Property(e => e.Discount).HasDefaultValueSql("0");
 
-                entity.Property(e => e.Quantity).HasDefaultValue(1);
+                entity.Property(e => e.Quantity).HasDefaultValueSql("1");
 
                 entity.Property(e => e.UnitPrice)
                     .HasColumnType("money")
-                    .HasDefaultValue(0m);
+                    .HasDefaultValueSql("0");
             });
 
             modelBuilder.Entity<Order>(entity => {
@@ -69,11 +69,11 @@ namespace Samples.Models.Northwind {
 
                 entity.HasIndex(e => e.ShippedDate).HasName("ShippedDate");
 
-                entity.Property(e => e.CustomerID).HasColumnType("nchar");
+                entity.Property(e => e.CustomerID).HasColumnType("nchar(5)");
 
                 entity.Property(e => e.Freight)
                     .HasColumnType("money")
-                    .HasDefaultValue(0m);
+                    .HasDefaultValueSql("0");
 
                 entity.Property(e => e.OrderDate).HasColumnType("datetime");
 
@@ -89,17 +89,17 @@ namespace Samples.Models.Northwind {
 
                 entity.HasIndex(e => e.SupplierID).HasName("SuppliersProducts");
 
-                entity.Property(e => e.Discontinued).HasDefaultValue(false);
+                entity.Property(e => e.Discontinued).HasDefaultValueSql("0");
 
-                entity.Property(e => e.ReorderLevel).HasDefaultValue(0);
+                entity.Property(e => e.ReorderLevel).HasDefaultValueSql("0");
 
                 entity.Property(e => e.UnitPrice)
                     .HasColumnType("money")
-                    .HasDefaultValue(0m);
+                    .HasDefaultValueSql("0");
 
-                entity.Property(e => e.UnitsInStock).HasDefaultValue(0);
+                entity.Property(e => e.UnitsInStock).HasDefaultValueSql("0");
 
-                entity.Property(e => e.UnitsOnOrder).HasDefaultValue(0);
+                entity.Property(e => e.UnitsOnOrder).HasDefaultValueSql("0");
             });
 
             modelBuilder.Entity<Supplier>(entity => {

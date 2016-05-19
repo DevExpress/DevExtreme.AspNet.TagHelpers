@@ -1,27 +1,18 @@
 ﻿{
+    "buildOptions": {
+        "emitEntryPoint": true
+    },
 
-    "commands": {
-        "run": "DevExtreme.AspNet.TagHelpers.Generator"
+    "dependencies": {
+        "Microsoft.NETCore.App": {
+            "type": "platform",
+            "version": "1.0.0-rc2-*"
+        }
     },
 
     "frameworks": {
-        "dnx451": {
-            "frameworkAssemblies": {
-                "System.Xml": "",
-                "System.Xml.Linq": ""
-            }
-        },
-        "dnxcore50": {
-            "dependencies": {
-                "System.Runtime": "4.0.20",
-                "System.Collections": "4.0.10",
-                "System.Console": "4.0.0-beta-*",
-                "System.Linq": "4.0.0",
-                "System.IO.FileSystem": "4.0.0",
-                "System.Text.RegularExpressions": "4.0.0",
-                "System.Xml.XDocument": "4.0.0",
-                "System.Xml.XPath": "4.0.0"
-            }
+        "netcoreapp1.0": {
+            "imports": [ "dnxcore50" ]
         }
     }
 }

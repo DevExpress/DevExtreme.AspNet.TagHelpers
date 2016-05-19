@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-sm-12">
 
-                <dx-sparkline argument-field="Month" value-field="Amount" type="SparklineType.Bar" show-min-max="true" show-first-last="true">
+                <dx-sparkline argument-field="Month" value-field="Amount" type="Bar" show-min-max="true" show-first-last="true">
                     <datasource url='@Url.Action("ShipsByMonth", "Northwind", new { shipper = shipper })' />
                 </dx-sparkline>
 

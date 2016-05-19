@@ -10,7 +10,7 @@ namespace DevExtreme.AspNet.TagHelpers.Generator {
         static readonly string[] DEFAULT_USINGS = new[] {
             "System",
             "System.Collections.Generic",
-            "Microsoft.AspNet.Razor.TagHelpers"
+            "Microsoft.AspNetCore.Razor.TagHelpers"
         };
 
         string _outputRoot;

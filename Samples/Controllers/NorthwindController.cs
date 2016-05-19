@@ -1,6 +1,6 @@
 ﻿using DevExtreme.AspNet.Data;
-using Microsoft.AspNet.Mvc;
-using Microsoft.Data.Entity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using Samples.Models.Northwind;
 using System;
@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 
 namespace Samples.Controllers {
 
-    public class NorthwindController {
+    public class NorthwindController : Controller {
         NorthwindContext _nwind;
 
         public NorthwindController(NorthwindContext nwind) {
@@ -31,6 +31,7 @@ namespace Samples.Controllers {
 #endif
         }
 
+        [HttpGet]
         public object SalesCube() {
             return from d in _nwind.Order_Details
                    let p = d.Product
@@ -43,11 +44,13 @@ namespace Samples.Controllers {
                    };
         }
 
-        public object Orders(DataSourceLoadOptions options) {
+        [HttpGet]
+        public object Orders([DataSourceLoadOptions] DataSourceLoadOptions options) {
             return DataSourceLoader.Load(_nwind.Orders, options);
         }
 
-        public object OrderDetails(int orderID, DataSourceLoadOptions options) {
+        [HttpGet]
+        public object OrderDetails(int orderID, [DataSourceLoadOptions] DataSourceLoadOptions options) {
             return DataSourceLoader.Load(
                 from i in _nwind.Order_Details
                 where i.OrderID == orderID
@@ -61,7 +64,8 @@ namespace Samples.Controllers {
             );
         }
 
-        public object CustomersLookup(DataSourceLoadOptions options) {
+        [HttpGet]
+        public object CustomersLookup([DataSourceLoadOptions] DataSourceLoadOptions options) {
             return DataSourceLoader.Load(
                 from c in _nwind.Customers
                 orderby c.CompanyName
@@ -70,7 +74,8 @@ namespace Samples.Controllers {
             );
         }
 
-        public object ShippersLookup(DataSourceLoadOptions options) {
+        [HttpGet]
+        public object ShippersLookup([DataSourceLoadOptions] DataSourceLoadOptions options) {
             return DataSourceLoader.Load(
                 from s in _nwind.Shippers
                 orderby s.CompanyName
@@ -79,25 +84,42 @@ namespace Samples.Controllers {
             );
         }
 
-        public void UpdateOrder(int key, string values) {
+        [HttpPut]
+        public IActionResult UpdateOrder(int key, string values) {
             var order = _nwind.Orders.First(o => o.OrderID == key);
             JsonConvert.PopulateObject(values, order);
+
+            if(!TryValidateModel(order))
+                return BadRequest(GetFullErrorString());
+
             _nwind.SaveChanges();
+
+            return Ok();
         }
 
-        public void InsertOrder(string values) {
+        [HttpPost]
+        public IActionResult InsertOrder(string values) {
             var order = new Order();
             JsonConvert.PopulateObject(values, order);
+
+            if(!TryValidateModel(order))
+                return BadRequest(GetFullErrorString());
+
+
             _nwind.Orders.Add(order);
             _nwind.SaveChanges();
+
+            return Ok();
         }
 
+        [HttpDelete]
         public void DeleteOrder(int key) {
             var order = _nwind.Orders.First(o => o.OrderID == key);
             _nwind.Orders.Remove(order);
             _nwind.SaveChanges();
         }
 
+        [HttpGet]
         public object ShipsByMonth(string shipper) {
             // NOTE see the #warning at the top of the file
             var temp = _nwind.Orders.Include(o => o.Shipper).ToArray();
@@ -113,6 +135,7 @@ namespace Samples.Controllers {
                    };
         }
 
+        [HttpGet]
         public object SalesByCategory() {
             // NOTE see the #warning at the top of the file
             var temp = _nwind.Order_Details.Include(d => d.Product.Category).ToArray();
@@ -128,6 +151,7 @@ namespace Samples.Controllers {
                    };
         }
 
+        [HttpGet]
         public object SalesByCategoryYear() {
             // NOTE see the #warning at the top of the file
             var temp = _nwind.Order_Details.Include(d => d.Product.Category).Include(d => d.Order).ToArray();
@@ -143,6 +167,18 @@ namespace Samples.Controllers {
                        Sales = g.Sum(d => d.Quantity * d.UnitPrice)
                    };
         }
+
+        string GetFullErrorString() {
+            var messages = new List<string>();
+
+            foreach(var entry in ModelState.Values) {
+                foreach(var error in entry.Errors)
+                    messages.Add(error.ErrorMessage);
+            }
+
+            return String.Join(" ", messages);
+        }
+
     }
 
 }
