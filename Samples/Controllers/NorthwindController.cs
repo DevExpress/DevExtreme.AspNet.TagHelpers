@@ -31,6 +31,7 @@ namespace Samples.Controllers {
 #endif
         }
 
+        [HttpGet]
         public object SalesCube() {
             return from d in _nwind.Order_Details
                    let p = d.Product
@@ -43,10 +44,12 @@ namespace Samples.Controllers {
                    };
         }
 
+        [HttpGet]
         public object Orders([DataSourceLoadOptions] DataSourceLoadOptions options) {
             return DataSourceLoader.Load(_nwind.Orders, options);
         }
 
+        [HttpGet]
         public object OrderDetails(int orderID, [DataSourceLoadOptions] DataSourceLoadOptions options) {
             return DataSourceLoader.Load(
                 from i in _nwind.Order_Details
@@ -61,6 +64,7 @@ namespace Samples.Controllers {
             );
         }
 
+        [HttpGet]
         public object CustomersLookup([DataSourceLoadOptions] DataSourceLoadOptions options) {
             return DataSourceLoader.Load(
                 from c in _nwind.Customers
@@ -70,6 +74,7 @@ namespace Samples.Controllers {
             );
         }
 
+        [HttpGet]
         public object ShippersLookup([DataSourceLoadOptions] DataSourceLoadOptions options) {
             return DataSourceLoader.Load(
                 from s in _nwind.Shippers
@@ -79,6 +84,7 @@ namespace Samples.Controllers {
             );
         }
 
+        [HttpPut]
         public IActionResult UpdateOrder(int key, string values) {
             var order = _nwind.Orders.First(o => o.OrderID == key);
             JsonConvert.PopulateObject(values, order);
@@ -91,6 +97,7 @@ namespace Samples.Controllers {
             return Ok();
         }
 
+        [HttpPost]
         public IActionResult InsertOrder(string values) {
             var order = new Order();
             JsonConvert.PopulateObject(values, order);
@@ -105,12 +112,14 @@ namespace Samples.Controllers {
             return Ok();
         }
 
+        [HttpDelete]
         public void DeleteOrder(int key) {
             var order = _nwind.Orders.First(o => o.OrderID == key);
             _nwind.Orders.Remove(order);
             _nwind.SaveChanges();
         }
 
+        [HttpGet]
         public object ShipsByMonth(string shipper) {
             // NOTE see the #warning at the top of the file
             var temp = _nwind.Orders.Include(o => o.Shipper).ToArray();
@@ -126,6 +135,7 @@ namespace Samples.Controllers {
                    };
         }
 
+        [HttpGet]
         public object SalesByCategory() {
             // NOTE see the #warning at the top of the file
             var temp = _nwind.Order_Details.Include(d => d.Product.Category).ToArray();
@@ -141,6 +151,7 @@ namespace Samples.Controllers {
                    };
         }
 
+        [HttpGet]
         public object SalesByCategoryYear() {
             // NOTE see the #warning at the top of the file
             var temp = _nwind.Order_Details.Include(d => d.Product.Category).Include(d => d.Order).ToArray();
