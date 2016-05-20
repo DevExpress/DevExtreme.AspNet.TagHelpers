@@ -1,5 +1,7 @@
 version: '{build}'
 
+# cache-bust 2016-05-20
+
 cache:
   - '%LOCALAPPDATA%\Microsoft\dotnet -> appveyor.yml'
   - '%USERPROFILE%\.nuget\packages -> appveyor.yml, **\project.json'
