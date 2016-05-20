@@ -1,6 +1,6 @@
 version: '{build}'
 
-# cache-bust 2016-05-20 10:39
+# cache-bust 2016-05-20 11:03
 
 cache:
   - '%LOCALAPPDATA%\Microsoft\dotnet -> appveyor.yml'
