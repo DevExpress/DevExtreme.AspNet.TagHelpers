@@ -6,7 +6,7 @@
     <entry docid="dxchartoptions_negativesaszeroes" propertyOf="StackedBarSeries,FullStackedBarSeries,StackedAreaSeries,FullStackedAreaSeries,StackedLineSeries,FullStackedLineSeries,StackedSplineSeries,FullStackedSplineSeries,StackedSplineAreaSeries,FullStackedSplineAreaSeries" />
     <entry docid="dxchartoptions_tooltip_location" propertyOf="BarSeries,StackedBarSeries,FullStackedBarSeries,BubbleSeries,StockSeries,CandleStickSeries" />
     <entry docid="dxpiechartoptions_innerradius" propertyOf="DoughnutSeries" />
-    <entry docid="dxpolarchartoptions_negativesaszeroes" propertyOf="StackedBarSeries,FullStackedBarSeries,StackedAreaSeries,FullStackedAreaSeries,StackedLineSeries,FullStackedLineSeries,StackedSplineSeries,FullStackedSplineSeries,StackedSplineAreaSeries,FullStackedSplineAreaSeries" />
+    <entry docid="dxpolarchartoptions_negativesaszeroes" propertyOf="StackedBarSeries" />
     <entry docid="commonseriesoptions_border" propertyOf="AreaSeries,StackedAreaSeries,FullStackedAreaSeries,FullStackedSplineAreaSeries,SplineAreaSeries,StepAreaSeries,RangeAreaSeries,BarSeries,StackedBarSeries,FullStackedBarSeries,RangeBarSeries,BubbleSeries" />
     <entry docid="commonseriesoptions_border_color" propertyOf="AreaSeries,StackedAreaSeries,FullStackedAreaSeries,StackedSplineAreaSeries,FullStackedSplineAreaSeries,SplineAreaSeries,StepAreaSeries,RangeAreaSeries,BarSeries,StackedBarSeries,FullStackedBarSeries,RangeBarSeries,BubbleSeries" />
     <entry docid="commonseriesoptions_border_dashstyle" propertyOf="AreaSeries,StackedAreaSeries,FullStackedAreaSeries,StackedSplineAreaSeries,FullStackedSplineAreaSeries,SplineAreaSeries,StepAreaSeries,RangeAreaSeries,BarSeries,StackedBarSeries,FullStackedBarSeries,RangeBarSeries,BubbleSeries" />
@@ -136,7 +136,6 @@
     <entry docid="commonpolarchartseriesoptions_selectionstyle_width" propertyOf="LineSeries" />
     <entry docid="commonpolarchartseriesoptions_stack" propertyOf="StackedBarSeries" />
     <entry docid="commonpolarchartseriesoptions_valueerrorbar" propertyOf="AreaSeries,BarSeries,LineSeries,ScatterSeries" />
-    <entry docid="commonpolarchartseriesoptions_valuefield" propertyOf="LineSeries,AreaSeries,ScatterSeries,BarSeries,StackedBarSeries" />
     <entry docid="commonpolarchartseriesoptions_width" propertyOf="LineSeries" />
     <entry docid="commonIndicatoroptions_arrowLength" propertyOf="TextCloud,TextCloud" />
     <entry docid="commonIndicatoroptions_backgroundColor" propertyOf="RangeBar,RangeBar" />
@@ -154,6 +153,7 @@
     <entry docid="commonIndicatoroptions_text_font" propertyOf="RangeBar,RangeBar,TextCloud,TextCloud" />
     <entry docid="commonIndicatoroptions_text_font_color" propertyOf="RangeBar,RangeBar,TextCloud,TextCloud" />
     <entry docid="commonIndicatoroptions_text_font_family" propertyOf="RangeBar,RangeBar,TextCloud,TextCloud" />
+    <entry docid="commonIndicatoroptions_text_font_opacity" propertyOf="RangeBar,RangeBar,TextCloud,TextCloud" />
     <entry docid="commonIndicatoroptions_text_font_size" propertyOf="RangeBar,RangeBar,TextCloud,TextCloud" />
     <entry docid="commonIndicatoroptions_text_font_weight" propertyOf="RangeBar,RangeBar,TextCloud,TextCloud" />
     <entry docid="commonIndicatoroptions_text_format" propertyOf="RangeBar,RangeBar,TextCloud,TextCloud" />

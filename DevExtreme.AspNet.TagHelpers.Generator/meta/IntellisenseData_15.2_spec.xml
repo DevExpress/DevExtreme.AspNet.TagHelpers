@@ -23,10 +23,10 @@
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="area" Description="Type of the area where the field is located." Default="undefined" Type="string">
             <Values>
-              <IntellisenseInfo Name="undefined " />
-              <IntellisenseInfo Name=" 'row' " />
-              <IntellisenseInfo Name=" 'column' " />
-              <IntellisenseInfo Name=" 'data'" />
+              <IntellisenseInfo Name="undefined" />
+              <IntellisenseInfo Name="'row'" />
+              <IntellisenseInfo Name="'column'" />
+              <IntellisenseInfo Name="'data'" />
             </Values>
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="areaIndex" Description="Index among the other fields displayed within the same area." Default="undefined" Type="number">
@@ -49,9 +49,9 @@
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="dataType" Description="Specifies a type of field values." Default="undefined" Type="string">
             <Values>
-              <IntellisenseInfo Name="'string' " />
-              <IntellisenseInfo Name=" 'number' " />
-              <IntellisenseInfo Name=" 'date'" />
+              <IntellisenseInfo Name="'string'" />
+              <IntellisenseInfo Name="'number'" />
+              <IntellisenseInfo Name="'date'" />
             </Values>
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="displayFolder" Description="The name of the folder in which the field is located." Default="undefined" Type="string">
@@ -62,8 +62,8 @@
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="filterType" Description="The filter type for the current field." Default="'include'" Type="string">
             <Values>
-              <IntellisenseInfo Name="'include' " />
-              <IntellisenseInfo Name=" 'exclude'" />
+              <IntellisenseInfo Name="'include'" />
+              <IntellisenseInfo Name="'exclude'" />
             </Values>
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="filterValues" Description="The filter values for the current field." Default="undefined" Type="array">
@@ -71,28 +71,28 @@
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="format" Description="Specifies a display format for field values." Default="''" Type="string">
             <Values>
-              <IntellisenseInfo Name="'currency' " />
-              <IntellisenseInfo Name=" 'fixedPoint' " />
-              <IntellisenseInfo Name=" 'percent' " />
-              <IntellisenseInfo Name=" 'decimal' " />
-              <IntellisenseInfo Name=" 'exponential' " />
-              <IntellisenseInfo Name=" 'largeNumber' " />
-              <IntellisenseInfo Name=" 'thousands' " />
-              <IntellisenseInfo Name=" 'millions' " />
-              <IntellisenseInfo Name=" 'billions' " />
-              <IntellisenseInfo Name=" 'trillions' " />
-              <IntellisenseInfo Name=" 'longDate' " />
-              <IntellisenseInfo Name=" 'longTime' " />
-              <IntellisenseInfo Name=" 'monthAndDay' " />
-              <IntellisenseInfo Name=" 'monthAndYear' " />
-              <IntellisenseInfo Name=" 'quarterAndYear' " />
-              <IntellisenseInfo Name=" 'shortDate' " />
-              <IntellisenseInfo Name=" 'shortTime' " />
-              <IntellisenseInfo Name=" 'millisecond' " />
-              <IntellisenseInfo Name=" 'day' " />
-              <IntellisenseInfo Name=" 'month' " />
-              <IntellisenseInfo Name=" 'quarter' " />
-              <IntellisenseInfo Name=" 'year'" />
+              <IntellisenseInfo Name="'currency'" />
+              <IntellisenseInfo Name="'fixedPoint'" />
+              <IntellisenseInfo Name="'percent'" />
+              <IntellisenseInfo Name="'decimal'" />
+              <IntellisenseInfo Name="'exponential'" />
+              <IntellisenseInfo Name="'largeNumber'" />
+              <IntellisenseInfo Name="'thousands'" />
+              <IntellisenseInfo Name="'millions'" />
+              <IntellisenseInfo Name="'billions'" />
+              <IntellisenseInfo Name="'trillions'" />
+              <IntellisenseInfo Name="'longDate'" />
+              <IntellisenseInfo Name="'longTime'" />
+              <IntellisenseInfo Name="'monthAndDay'" />
+              <IntellisenseInfo Name="'monthAndYear'" />
+              <IntellisenseInfo Name="'quarterAndYear'" />
+              <IntellisenseInfo Name="'shortDate'" />
+              <IntellisenseInfo Name="'shortTime'" />
+              <IntellisenseInfo Name="'millisecond'" />
+              <IntellisenseInfo Name="'day'" />
+              <IntellisenseInfo Name="'month'" />
+              <IntellisenseInfo Name="'quarter'" />
+              <IntellisenseInfo Name="'year'" />
             </Values>
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="groupIndex" Description="The index of the field within a group." Default="undefined" Type="number">
@@ -100,11 +100,11 @@
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="groupInterval" Description="Specifies how the values of the current field are combined into groups. Cannot be used for the XmlaStore store type." Default="undefined" Type="string|number">
             <Values>
-              <IntellisenseInfo Name="'year' " />
-              <IntellisenseInfo Name=" 'quarter' " />
-              <IntellisenseInfo Name=" 'month' " />
-              <IntellisenseInfo Name="  'day' " />
-              <IntellisenseInfo Name=" 'dayOfWeek'" />
+              <IntellisenseInfo Name="'year'" />
+              <IntellisenseInfo Name="'quarter'" />
+              <IntellisenseInfo Name="'month'" />
+              <IntellisenseInfo Name="'day'" />
+              <IntellisenseInfo Name="'dayOfWeek'" />
             </Values>
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="groupName" Description="The name of the group to which the field belongs." Default="undefined" Type="string">
@@ -118,8 +118,8 @@
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="runningTotal" Description="Specifies whether to summarize each next summary value with the previous one by rows or columns." Default="undefined" Type="string">
             <Values>
-              <IntellisenseInfo Name="'row' " />
-              <IntellisenseInfo Name=" 'column'" />
+              <IntellisenseInfo Name="'row'" />
+              <IntellisenseInfo Name="'column'" />
             </Values>
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="selector" Description="Specifies the function that determines how to split data from the data source into ranges for header items. Cannot be used for the XmlaStore store type." Default="undefined" Type="function(data)">
@@ -133,8 +133,8 @@
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="sortBy" Description="Specifies how field data should be sorted. Can be used for the XmlaStore store type only." Default="undefined" Type="string">
             <Values>
-              <IntellisenseInfo Name="'displayText' " />
-              <IntellisenseInfo Name=" 'value'" />
+              <IntellisenseInfo Name="'displayText'" />
+              <IntellisenseInfo Name="'value'" />
             </Values>
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="sortBySummaryField" Description="Sorts the header items of this field by the summary values of another field." Default="undefined" Type="string">
@@ -148,29 +148,29 @@
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="sortOrder" Description="Specifies the sort order of field values." Default="'asc'" Type="string">
             <Values>
-              <IntellisenseInfo Name="'asc' " />
-              <IntellisenseInfo Name=" 'desc'" />
+              <IntellisenseInfo Name="'asc'" />
+              <IntellisenseInfo Name="'desc'" />
             </Values>
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="summaryDisplayMode" Description="Specifies the summary post-processing algorithm." Default="undefined" Type="string">
             <Values>
-              <IntellisenseInfo Name="'absoluteVariation' " />
-              <IntellisenseInfo Name=" 'percentVariation' " />
-              <IntellisenseInfo Name=" 'percentOfColumnTotal' " />
-              <IntellisenseInfo Name=" 'percentOfRowTotal' " />
-              <IntellisenseInfo Name=" 'percentOfColumnGrandTotal' " />
-              <IntellisenseInfo Name=" 'percentOfRowGrandTotal' " />
-              <IntellisenseInfo Name=" 'percentOfGrandTotal'" />
+              <IntellisenseInfo Name="'absoluteVariation'" />
+              <IntellisenseInfo Name="'percentVariation'" />
+              <IntellisenseInfo Name="'percentOfColumnTotal'" />
+              <IntellisenseInfo Name="'percentOfRowTotal'" />
+              <IntellisenseInfo Name="'percentOfColumnGrandTotal'" />
+              <IntellisenseInfo Name="'percentOfRowGrandTotal'" />
+              <IntellisenseInfo Name="'percentOfGrandTotal'" />
             </Values>
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="summaryType" Description="Specifies how to aggregate field data. Cannot be used for the XmlaStore store type." Default="'count'" Type="string">
             <Values>
-              <IntellisenseInfo Name="'sum' " />
-              <IntellisenseInfo Name=" 'min' " />
-              <IntellisenseInfo Name=" 'max' " />
-              <IntellisenseInfo Name=" 'avg' " />
-              <IntellisenseInfo Name=" 'count' " />
-              <IntellisenseInfo Name=" 'custom'" />
+              <IntellisenseInfo Name="'sum'" />
+              <IntellisenseInfo Name="'min'" />
+              <IntellisenseInfo Name="'max'" />
+              <IntellisenseInfo Name="'avg'" />
+              <IntellisenseInfo Name="'count'" />
+              <IntellisenseInfo Name="'custom'" />
             </Values>
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="visible" Description="A boolean value specifying whether or not the field is visible in the pivot grid and the Field Chooser." Default="true" Type="boolean">
