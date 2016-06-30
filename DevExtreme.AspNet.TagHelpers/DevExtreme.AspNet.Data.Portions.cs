@@ -19,13 +19,13 @@ namespace DevExtreme.AspNet.Data {
         public Task BindModelAsync(ModelBindingContext bindingContext) {
             var loadOptions = new DataSourceLoadOptions();
             DataSourceLoadOptionsParser.Parse(loadOptions, key => bindingContext.ValueProvider.GetValue(key).FirstOrDefault());
-            bindingContext.Result = ModelBindingResult.Success(bindingContext.ModelName, loadOptions);
+            bindingContext.Result = ModelBindingResult.Success(loadOptions);
             return Task.CompletedTask;
         }
 
     }
 
-    // Temporary workaround for https://github.com/aspnet/Mvc/issues/4652    
+    [Obsolete("This attribute is now obsolete and is no longer used. It was used as a workaround for the issue discussed at https://github.com/aspnet/Mvc/issues/4652")]
     public class DataSourceLoadOptionsAttribute : ModelBinderAttribute {
 
         public DataSourceLoadOptionsAttribute() {

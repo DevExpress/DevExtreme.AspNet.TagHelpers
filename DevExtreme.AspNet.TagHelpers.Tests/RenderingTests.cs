@@ -1,12 +1,16 @@
 ﻿using DevExtreme.AspNet.TagHelpers.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Razor.TagHelpers;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using System.Buffers;
+using Newtonsoft.Json.Serialization;
 
 namespace DevExtreme.AspNet.TagHelpers.Tests {
 
@@ -141,7 +145,16 @@ namespace DevExtreme.AspNet.TagHelpers.Tests {
 
         [Fact]
         public void RendersItemsDatasource() {
-            page.Datasource = new ItemsDatasourceTagHelper {
+            var jsonFormatter = new JsonOutputFormatter(
+                new JsonSerializerSettings {
+                    ContractResolver = new DefaultContractResolver {
+                        NamingStrategy = new CamelCaseNamingStrategy()
+                    }
+                },
+                ArrayPool<char>.Shared
+            );
+
+            page.Datasource = new ItemsDatasourceTagHelper(jsonFormatter) {
                 Items = new[] { 123, 456, 789 }
             };
 

@@ -47,33 +47,6 @@ namespace DevExtreme.AspNet.TagHelpers.Tests {
             Assert.True(dataSourceConfig.ContainsKey("OnChanged"));
         }
 
-        [Fact]
-        public void ItemsDatasourceDoesNotChangeCase() {
-            var page = new PivotDatasourcePage();
-            page.DataSources.Add(new ItemsDatasourceTagHelper {
-                Items = new[] {
-                    new {
-                        CamelCaseName = "Value1",
-                        lowerCamelCaseName = "value2"
-                    }
-                }
-            });
-
-            page.ExecuteSynchronously();
-
-            var dataSourceConfig = page.TopLevelTag.GetConfigValue<IDictionary<string, object>>("dataSource");
-
-            AssertIgnoreWhitespaces.Contains(
-                @"""data"": [
-                    {
-                        ""CamelCaseName"": ""Value1"",
-                        ""lowerCamelCaseName"": ""value2""
-                    }
-                ]",
-                JsonConvert.SerializeObject(dataSourceConfig["store"])
-            );
-        }
-
         class TestStoreDatasourceTagHelper : StoreDatasourceTagHelper {
             protected override string FormatStoreFactory(string args) {
                 return null;

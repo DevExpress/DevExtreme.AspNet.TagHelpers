@@ -3,25 +3,25 @@
 }
 
 <dx-data-grid id="myGrid" height="500px">
-    <datasource controller="Northwind" load-action="Orders" key="OrderID"
+    <datasource controller="Northwind" load-action="Orders" key="orderID"
                 update-action="UpdateOrder" insert-action="InsertOrder" delete-action="DeleteOrder" />
 
-    <column datafield="CustomerID" caption="Customer">
-        <lookup value-expr="Value" display-expr="Text">
-            <datasource controller="Northwind" load-action="CustomersLookup" key="Value" />
+    <column datafield="customerID" caption="Customer">
+        <lookup value-expr="value" display-expr="text">
+            <datasource controller="Northwind" load-action="CustomersLookup" key="value" />
         </lookup>
     </column>
-    <column datafield="OrderDate" datatype="Date">
+    <column datafield="orderDate" datatype="Date">
         <header-filter group-interval='"quarter"' />
     </column>
-    <column datafield="Freight">
+    <column datafield="freight">
         <header-filter group-interval="100" />
     </column>
-    <column datafield="ShipCountry" />
-    <column datafield="ShipRegion" />
-    <column datafield="ShipVia">
-        <lookup value-expr="Value" display-expr="Text">
-            <datasource controller="Northwind" load-action="ShippersLookup" key="Value" />
+    <column datafield="shipCountry" />
+    <column datafield="shipRegion" />
+    <column datafield="shipVia">
+        <lookup value-expr="value" display-expr="text">
+            <datasource controller="Northwind" load-action="ShippersLookup" key="value" />
         </lookup>
     </column>
 
@@ -41,8 +41,8 @@
     <grouping auto-expand-all="false" />
 
     <summary>
-        <total-item column="Freight" summary-type="Sum" />
-        <group-item column="Freight" summary-type="Sum" />
+        <total-item column="freight" summary-type="Sum" />
+        <group-item column="freight" summary-type="Sum" />
         <group-item summary-type="Count" />
     </summary>
 
@@ -56,7 +56,7 @@
             $("<div>")
                 .dxDataGrid({
                     dataSource: DevExpress.data.AspNet.createStore({
-                        loadUrl: "@Url.Action("OrderDetails", "Northwind")" + "?" + $.param({ orderID: options.data.OrderID })
+                        loadUrl: "@Url.Action("OrderDetails", "Northwind")" + "?" + $.param({ orderID: options.data.orderID })
                     })
                 })
                 .appendTo(container);

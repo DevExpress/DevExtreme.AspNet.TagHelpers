@@ -11,15 +11,15 @@
     },
 
     "dependencies": {
-        "Microsoft.AspNetCore.Mvc.Core": "1.0.0-rc2-final",
-        "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.0-rc2-final",
-        "Microsoft.AspNetCore.Razor.Runtime": "1.0.0-rc2-final",
-        "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.0-rc2-final",
-        "DevExtreme.AspNet.Data": "1.0.0-rc2-*"
+        "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
+        "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.0",
+        "Microsoft.AspNetCore.Razor.Runtime": "1.0.0",
+        "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.0",
+        "DevExtreme.AspNet.Data": "1.0.0"
     },
 
     "frameworks": {
-        "netstandard1.3": {
+        "netstandard1.6": {
             "imports": [ "dnxcore50" ]
         }
     }

@@ -12,7 +12,7 @@ namespace Samples.Controllers {
     public class GoogleCalendarController {
 
         [HttpGet]
-        public async Task<object> Appointments([DataSourceLoadOptions] DataSourceLoadOptions loadOptions) {
+        public async Task<object> Appointments(DataSourceLoadOptions loadOptions) {
             var url = "https://www.googleapis.com/calendar/v3/calendars/"
                 + "f7jnetm22dsjc3npc2lu3buvu4@group.calendar.google.com"
                 + "/events?key=" + "AIzaSyBnNAISIUKe6xdhq1_rjor2rxoI3UlMY7k";

@@ -45,12 +45,12 @@ namespace Samples.Controllers {
         }
 
         [HttpGet]
-        public object Orders([DataSourceLoadOptions] DataSourceLoadOptions options) {
+        public object Orders(DataSourceLoadOptions options) {
             return DataSourceLoader.Load(_nwind.Orders, options);
         }
 
         [HttpGet]
-        public object OrderDetails(int orderID, [DataSourceLoadOptions] DataSourceLoadOptions options) {
+        public object OrderDetails(int orderID, DataSourceLoadOptions options) {
             return DataSourceLoader.Load(
                 from i in _nwind.Order_Details
                 where i.OrderID == orderID
@@ -65,7 +65,7 @@ namespace Samples.Controllers {
         }
 
         [HttpGet]
-        public object CustomersLookup([DataSourceLoadOptions] DataSourceLoadOptions options) {
+        public object CustomersLookup(DataSourceLoadOptions options) {
             return DataSourceLoader.Load(
                 from c in _nwind.Customers
                 orderby c.CompanyName
@@ -75,7 +75,7 @@ namespace Samples.Controllers {
         }
 
         [HttpGet]
-        public object ShippersLookup([DataSourceLoadOptions] DataSourceLoadOptions options) {
+        public object ShippersLookup(DataSourceLoadOptions options) {
             return DataSourceLoader.Load(
                 from s in _nwind.Shippers
                 orderby s.CompanyName
@@ -127,7 +127,7 @@ namespace Samples.Controllers {
             return from o in temp
                    where o.Shipper != null
                    orderby o.OrderDate
-                   group o by o.OrderDate.Value.ToString("yyyy/MM") into g
+                   group o by o.OrderDate.Value.ToString("yyyy'/'MM") into g
                    select new {
                        Month = g.Key,
                        Amount = g.Count(o => o.Shipper.CompanyName == shipper),

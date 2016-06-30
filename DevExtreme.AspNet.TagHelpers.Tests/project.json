@@ -3,14 +3,14 @@
     "dependencies": {
         "Microsoft.NETCore.App": {
             "type": "platform",
-            "version": "1.0.0-rc2-*"
+            "version": "1.0.0"
         },
         "DevExtreme.AspNet.TagHelpers": {
             "target": "project"
         },
-        "Microsoft.AspNetCore.Mvc.Razor": "1.0.0-rc2-final",
+        "Microsoft.AspNetCore.Mvc.Razor": "1.0.0",
         "xunit": "2.1.0",
-        "dotnet-test-xunit": "1.0.0-rc2-*"
+        "dotnet-test-xunit": "2.2.0-preview2-*"
     },
 
     "testRunner": "xunit",
