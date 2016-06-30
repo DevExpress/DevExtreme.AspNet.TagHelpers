@@ -13,7 +13,7 @@ if ($tag -match '^v?(([.\d]+)[\w-]*)$') {
 
 $meta_company = "Developer Express Inc."
 $meta_copyright = "Copyright (c) $meta_company"
-$meta_description = "ASP.NET Core (MVC 6) TagHelpers for DevExtreme Widgets"
+$meta_description = "ASP.NET Core (MVC 6) Tag Helpers for DevExtreme Widgets"
 $meta_license_url = "https://github.com/DevExpress/DevExtreme.AspNet.TagHelpers/blob/master/LICENSE"
 $meta_project_url = "https://github.com/DevExpress/DevExtreme.AspNet.TagHelpers"
 
