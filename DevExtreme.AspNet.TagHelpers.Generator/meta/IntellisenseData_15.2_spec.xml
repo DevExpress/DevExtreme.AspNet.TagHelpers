@@ -27,6 +27,7 @@
               <IntellisenseInfo Name="'row'" />
               <IntellisenseInfo Name="'column'" />
               <IntellisenseInfo Name="'data'" />
+              <IntellisenseInfo Name="'filter'" />
             </Values>
           </IntellisenseObjectPropertyInfo>
           <IntellisenseObjectPropertyInfo Name="areaIndex" Description="Index among the other fields displayed within the same area." Default="undefined" Type="number">

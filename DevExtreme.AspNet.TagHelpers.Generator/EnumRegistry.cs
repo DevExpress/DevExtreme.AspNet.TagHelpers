@@ -1280,7 +1280,7 @@ namespace DevExtreme.AspNet.TagHelpers.Generator {
             {
                 "PivotGridArea",
                 new EnumInfo(
-                    new[] { "row", "column", "data" },
+                    new[] { "row", "column", "data", "filter" },
                     new[] { "DevExtreme.AspNet.TagHelpers.Data.Datasource.Field.Area" }
                 )
             },

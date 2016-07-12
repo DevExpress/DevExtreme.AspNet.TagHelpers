@@ -265,9 +265,6 @@
       <IntellisenseObjectPropertyInfo Name="onItemTitleClick" Description="A handler for the itemTitleClick event." Default="null" Type="function|string">
         <Values />
       </IntellisenseObjectPropertyInfo>
-      <IntellisenseObjectPropertyInfo Name="onItemTitleHold" Description="A handler for the itemTitleHold event." Default="null" Type="function">
-        <Values />
-      </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
   <IntellisenseObjectInfo Name="dxActionSheet" Description="A widget consisting of a set of choices related to a certain task." WidgetCategory="UI_Widgets" Type="object">
@@ -1878,6 +1875,9 @@
       <IntellisenseObjectPropertyInfo Name="customizeColumns" Description="Specifies a function that customizes grid columns after they are created." Type="function(columns)">
         <Values />
       </IntellisenseObjectPropertyInfo>
+      <IntellisenseObjectPropertyInfo Name="customizeExportData" Description="Customizes grid columns and data before exporting." Type="function(columns, rows)">
+        <Values />
+      </IntellisenseObjectPropertyInfo>
       <IntellisenseObjectPropertyInfo Name="dataSource" Description="Specifies a data source for the grid." Default="null" Type="array|datasource|datasource configuration">
         <Values />
       </IntellisenseObjectPropertyInfo>
@@ -1910,7 +1910,7 @@
               <IntellisenseObjectPropertyInfo Name="addRow" Description="Specifies text for a hint that appears when a user hovers the mouse pointer over the &quot;Add&quot; button. Setting this option makes sense only when the allowAdding option is true." Default="'Add a row'" Type="string">
                 <Values />
               </IntellisenseObjectPropertyInfo>
-              <IntellisenseObjectPropertyInfo Name="cancelAllChanges" Description="Specifies text for a hint that appears when a user hovers the mouse pointer over the &quot;Revert&quot; button. Setting this option makes sense only when the editMode option is set to batch." Default="'Discard changes'" Type="string">
+              <IntellisenseObjectPropertyInfo Name="cancelAllChanges" Description="Specifies text for a hint that appears when a user hovers the mouse pointer over the &quot;Revert&quot; button. Setting this option makes sense only when the mode option is set to batch." Default="'Discard changes'" Type="string">
                 <Values />
               </IntellisenseObjectPropertyInfo>
               <IntellisenseObjectPropertyInfo Name="cancelRowChanges" Description="Specifies text for a cancel button displayed when a row is in the editing state. Setting this option makes sense only when the allowUpdating option is set to true." Default="'Cancel'" Type="string">
@@ -1928,7 +1928,7 @@
               <IntellisenseObjectPropertyInfo Name="editRow" Description="Specifies text for a button that turns a row into the editing state. Setting this option makes sense only when the allowUpdating option is set to true." Default="'Edit'" Type="string">
                 <Values />
               </IntellisenseObjectPropertyInfo>
-              <IntellisenseObjectPropertyInfo Name="saveAllChanges" Description="Specifies text for a hint that appears when a user hovers the mouse pointer over the &quot;Save&quot; button. Setting this option makes sense only when the editMode option is set to batch." Default="'Save changes'" Type="string">
+              <IntellisenseObjectPropertyInfo Name="saveAllChanges" Description="Specifies text for a hint that appears when a user hovers the mouse pointer over the &quot;Save&quot; button. Setting this option makes sense only when the mode option is set to batch." Default="'Save changes'" Type="string">
                 <Values />
               </IntellisenseObjectPropertyInfo>
               <IntellisenseObjectPropertyInfo Name="saveRowChanges" Description="Specifies text for a save button displayed when a row is in the editing state. Setting this option makes sense only when the allowUpdating option is set to true." Default="'Save'" Type="string">
@@ -1937,7 +1937,7 @@
               <IntellisenseObjectPropertyInfo Name="undeleteRow" Description="Specifies text for a button that recovers a deleted row. Setting this option makes sense only if the grid uses the batch edit mode and the allowDeleting option is set to true." Default="'Undelete'" Type="string">
                 <Values />
               </IntellisenseObjectPropertyInfo>
-              <IntellisenseObjectPropertyInfo Name="validationCancelChanges" Description="Specifies text for a hint that appears when a user hovers the mouse pointer over the &quot;Cancel changes&quot; button. Setting this option makes sense only when the editMode option is set to cell and the validation capabilities are enabled." Default="'Cancel changes'" Type="string">
+              <IntellisenseObjectPropertyInfo Name="validationCancelChanges" Description="Specifies text for a hint that appears when a user hovers the mouse pointer over the &quot;Cancel changes&quot; button. Setting this option makes sense only when the mode option is set to cell and the validation capabilities are enabled." Default="'Cancel changes'" Type="string">
                 <Values />
               </IntellisenseObjectPropertyInfo>
             </Properties>
@@ -6887,6 +6887,9 @@
           <IntellisenseObjectPropertyInfo xsi:type="IntellisenseObjectInfo" Name="location" Description="Specifies the item location and size against the widget grid." Type="array">
             <Values />
             <Properties>
+              <IntellisenseObjectPropertyInfo Name="col" Description="" Type="number">
+                <Values />
+              </IntellisenseObjectPropertyInfo>
               <IntellisenseObjectPropertyInfo Name="colspan" Description="Specifies the width of the element in columns." Default="undefined" Type="number">
                 <Values />
               </IntellisenseObjectPropertyInfo>
@@ -10522,7 +10525,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxChart" Description="A widget used to embed charts into HTML JS applications." WidgetCategory="Data_Visualization_Widgets" Type="object">
+  <IntellisenseObjectInfo Name="dxChart" Description="A widget used to embed charts into web applications." WidgetCategory="Data_Visualization_Widgets" Type="object">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Description="A handler for the disposing event." Default="null" Type="function">
@@ -15534,7 +15537,7 @@
       </IntellisenseObjectPropertyInfo>
     </Properties>
   </IntellisenseObjectInfo>
-  <IntellisenseObjectInfo Name="dxPieChart" Description="A circular chart widget for HTML JS applications." WidgetCategory="Data_Visualization_Widgets" Type="object">
+  <IntellisenseObjectInfo Name="dxPieChart" Description="A circular chart widget for web applications." WidgetCategory="Data_Visualization_Widgets" Type="object">
     <Values />
     <Properties>
       <IntellisenseObjectPropertyInfo Name="onDisposing" Description="A handler for the disposing event." Default="null" Type="function">
