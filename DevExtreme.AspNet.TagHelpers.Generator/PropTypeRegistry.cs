@@ -16,6 +16,7 @@ namespace DevExtreme.AspNet.TagHelpers.Generator {
             CLR_OBJECT = "object",
             CLR_ARRAY_STRING = "IEnumerable<string>",
             CLR_ARRAY_OBJECT = "IEnumerable<object>",
+            CLR_ARRAY_INT = "IEnumerable<int>",
 
             SPECIAL_RAW_STRING = "sp_raw_string",
             SPECIAL_DOM_TEMPLATE = "sp_dom_template";
@@ -59,7 +60,7 @@ namespace DevExtreme.AspNet.TagHelpers.Generator {
             { "DevExtreme.AspNet.TagHelpers.dxDataGrid.Editing.Form", CLR_OBJECT },
             { "DevExtreme.AspNet.TagHelpers.dxDataGrid.FilterRow.OperationDescriptions", CLR_OBJECT },
             { "DevExtreme.AspNet.TagHelpers.dxDataGrid.Height", CLR_STRING },
-            { "DevExtreme.AspNet.TagHelpers.dxDataGrid.Pager.AllowedPageSizes", CLR_STRING },
+            { "DevExtreme.AspNet.TagHelpers.dxDataGrid.Pager.AllowedPageSizes", CLR_ARRAY_INT },
             { "DevExtreme.AspNet.TagHelpers.dxDataGrid.Pager.Visible", CLR_BOOL },
             { "DevExtreme.AspNet.TagHelpers.dxDataGrid.Scrolling.UseNative", CLR_BOOL },
             { "DevExtreme.AspNet.TagHelpers.dxDataGrid.SelectedRowKeys", CLR_ARRAY_OBJECT },
