@@ -8,14 +8,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-#warning TODO review LINQ queries below after the following EF7 bugs are fixed
-// https://github.com/aspnet/EntityFramework/issues/2341 "Support translating of GroupBy() to SQL"
-// https://github.com/aspnet/EntityFramework/issues/3626 "GroupBy throws NRE when grouping using navigation properties"
-// https://github.com/aspnet/EntityFramework/issues/3674 "Grouping with Where on a navigation prop fails" 
-// https://github.com/aspnet/EntityFramework/issues/3675 "Sequence contains more than one element when grouping by a nested (nav) prop"
-// https://github.com/aspnet/EntityFramework/issues/3676 "Usage of the "let" keyword breaks grouping" 
-
-
 namespace Samples.Controllers {
 
     public class NorthwindController : Controller {
@@ -121,10 +113,7 @@ namespace Samples.Controllers {
 
         [HttpGet]
         public object ShipsByMonth(string shipper) {
-            // NOTE see the #warning at the top of the file
-            var temp = _nwind.Orders.Include(o => o.Shipper).ToArray();
-
-            return from o in temp
+            return from o in _nwind.Orders.Include(o => o.Shipper)
                    where o.Shipper != null
                    orderby o.OrderDate
                    group o by o.OrderDate.Value.ToString("yyyy'/'MM") into g
@@ -137,10 +126,8 @@ namespace Samples.Controllers {
 
         [HttpGet]
         public object SalesByCategory() {
-            // NOTE see the #warning at the top of the file
-            var temp = _nwind.Order_Details.Include(d => d.Product.Category).ToArray();
-
-            return from d in temp
+#warning TODO remove ToArray() when https://github.com/aspnet/EntityFramework/issues/3676 fix is released
+            return from d in _nwind.Order_Details.Include(d => d.Product.Category).ToArray()
                    group d by d.Product.Category.CategoryName into g
                    let sales = g.Sum(d => d.Quantity * d.UnitPrice)
                    orderby sales descending
@@ -153,10 +140,7 @@ namespace Samples.Controllers {
 
         [HttpGet]
         public object SalesByCategoryYear() {
-            // NOTE see the #warning at the top of the file
-            var temp = _nwind.Order_Details.Include(d => d.Product.Category).Include(d => d.Order).ToArray();
-
-            return from d in temp
+            return from d in _nwind.Order_Details.Include(d => d.Product.Category).Include(d => d.Order)
                    let year = d.Order.OrderDate.Value.Year
                    let category = d.Product.Category.CategoryName
                    orderby year, category
