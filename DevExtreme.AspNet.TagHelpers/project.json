@@ -18,9 +18,14 @@
         "DevExtreme.AspNet.Data": "1.0.0"
     },
 
-    "frameworks": {
-        "netstandard1.6": {
-            "imports": [ "dotnet" ]
-        }
+  "frameworks": {
+    "net451": {
+      "frameworkAssemblies": {
+        "System.Runtime.Serialization": "4.0.0.0"
+      }
+    },
+    "netstandard1.6": {
+      "imports": [ "dotnet" ]
     }
+  }
 }
