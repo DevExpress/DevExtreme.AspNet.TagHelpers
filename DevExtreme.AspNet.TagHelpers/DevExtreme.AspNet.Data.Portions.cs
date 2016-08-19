@@ -20,7 +20,7 @@ namespace DevExtreme.AspNet.Data {
             var loadOptions = new DataSourceLoadOptions();
             DataSourceLoadOptionsParser.Parse(loadOptions, key => bindingContext.ValueProvider.GetValue(key).FirstOrDefault());
             bindingContext.Result = ModelBindingResult.Success(loadOptions);
-            return Task.CompletedTask;
+            return Task.FromResult(true);
         }
 
     }
