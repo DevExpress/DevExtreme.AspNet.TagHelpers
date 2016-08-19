@@ -1,4 +1,5 @@
-﻿using DevExtreme.AspNet.Data.Helpers;
+﻿using DevExtreme.AspNet.Data;
+using DevExtreme.AspNet.Data.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Net.Http.Headers;
@@ -8,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DevExtreme.AspNet.Data {
+namespace DevExtreme.AspNet.TagHelpers {
 
     [ModelBinder(BinderType = typeof(DataSourceLoadOptionsBinder))]
     public class DataSourceLoadOptions : DataSourceLoadOptionsBase {
